@@ -1,15 +1,27 @@
 import Hero from '@/components/Hero'
-import Image from 'next/image'
 import styles from '@/styles'
 import HeroSection from '@/components/HeroSection'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-24 bg-primary">
+    <div className="bg-primary w-full overflow-hidden">
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <HeroSection />
+        
+      </div>
+    </div>
+
+    <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>
-    </main>
+    </div>
+    
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
+        <HeroSection />
+      </div>
+    </div>
+  </div>
   )
 }

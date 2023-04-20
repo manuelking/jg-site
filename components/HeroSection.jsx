@@ -1,31 +1,28 @@
 import Image from 'next/image'
 import React from 'react'
-import styles from '@/styles'
+import styles, { layout } from '@/styles'
+import Button from './Button'
 
 const HeroSection = () => {
   return (
-    <section className={`flex sm:flex-row flex-col ${styles.paddingY} px-24`}>
+    <section id="features" className={layout.section}>
+    <div className={layout.sectionInfo}>
+        <h2 className={`${styles.heading2} text-center`}>
+            Spotlight
+        </h2>
+        <h1 className={`${styles.paragraph} max-w-[470px] mt-5 text-center`}>
+            Check out my spotlight
+        </h1>
 
-    <div className='flex-1 flex-row justify-between items-end'>
-    <Image src='/img1.svg' alt='img1' width={543} height={349} className='object-contain' />
+      <Button styles={`mt-10`} text='Spotlight &#160;&#160; &rarr;' />
     </div>
-    
-    <div className={`flex text-left flex-col`}>
-    <div className='flex flex-row justify-between items-center w-full mt-10'>
-    <h1 className='flex font-normal text-[64px] text-white'>
-    Joe Grater
-    </h1>
+
+    <div className={`${layout.sectionImg} flex-col`}>
+      <Image src='/img2.svg' alt='img2' width={330} height={495} />
     </div>
-    
-    <p className={`${styles.paragraph} text-left mt-6`}>
-    Actor / Teacher based in London and Reading
-    </p>
-    </div>
-    
-    
-    </section>
-    
+  </section>
   )
 }
 
 export default HeroSection
+

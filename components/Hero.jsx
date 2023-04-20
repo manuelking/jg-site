@@ -1,29 +1,33 @@
 import React from 'react'
-import styles from '@/styles'
+import styles, { layout } from '@/styles'
 import Image from 'next/image'
+import Button from './Button'
 
 const Hero = () => {
   return (
-    <section className={`flex sm:flex-row flex-col ${styles.paddingY} px-24 mt-20`}>
+    <section id="product" className={layout.sectionReverse}>
+    <div className={layout.sectionImgReverse}>
+        <Image src='/img1.svg' alt='img1' width={543} height={349} />
 
-    
-    <div className={`flex-1 ${styles.flexStart} flex-col`}>
-    <div className='flex absolute flex-row justify-between items-center w-full'>
-    <h1 className='flex relative flex-row justify-between items-center w-full flex-1 font-normal text-[64px] text-white -top-24 -mt-14'>
-    Spotlight
-    </h1>
+      {/* gradient start */}
+      <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
+      <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
+      {/* gradient end */}
     </div>
-    
-    <p className={`font-normal text-white text-left text-[32px] leading-[30.8px] mt-2`}>
-    Check out my Spotlight
-    </p>
+
+    <div className={layout.sectionInfo}>
+      <h2 className={`${styles.heading2} text-center`}>
+        Joe Grater
+      </h2>
+      <p className={`${styles.paragraph} max-w-[470px] mt-5 text-end`}>
+        Actor / Teaching based in <br className="sm:block hidden" /> London and Reading 
+      </p>
+
+      <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
+
+      </div>
     </div>
-    
-    <div className='flex flex-row justify-between items-end'>
-    <Image src='/img2.svg' alt='img1' width={330} height={495} className='object-contain' />
-    </div>
-    
-    </section>
+  </section>
   )
 }
 
