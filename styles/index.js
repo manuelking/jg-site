@@ -1,7 +1,7 @@
 const styles = {
     boxWidth: "xl:max-w-[1280px] w-full",
   
-    heading2: "font-poppins font-semibold xs:text-[48px] text-[64px] text-white xs:leading-[76.8px] leading-[66.8px] w-full text-left",
+    heading2: "font-poppins font-semibold xs:text-[48px] text-[56px] text-white xs:leading-[76.8px] leading-[66.8px] w-full text-left",
     paragraph: "font-poppins font-normal text-white text-left text-[16px] leading-[30.8px]",
   
     flexCenter: "flex justify-center items-center",
@@ -17,13 +17,13 @@ const styles = {
   };
   
   export const layout = {
-    section: `flex md:flex-row flex-col pl-6 ${styles.paddingY}`,
-    sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
+    section: `flex md:flex-col flex-row ${styles.paddingY}`,
+    sectionReverse: `flex md:flex-row flex-col-reverse items-center ${styles.paddingY}`,
   
     sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
     sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
   
-    sectionInfo: `flex-1 ${styles.flexCenter} flex-col`,
+    sectionInfo: `flex-1 ${styles.flexCenter}  flex-col`,
   };
   
   export default styles;

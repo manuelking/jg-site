@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hero-gradient {
+  background: linear-gradient(
+    249.33deg, 
+    #789EFF 2.85%, 
+    rgba(43, 102, 255, 0) 93.43%,
+    );
+}

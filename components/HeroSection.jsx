@@ -5,21 +5,23 @@ import Button from './Button'
 
 const HeroSection = () => {
   return (
-    <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
-        <h2 className={`${styles.heading2} text-center`}>
-            Spotlight
-        </h2>
-        <h1 className={`${styles.paragraph} max-w-[470px] mt-5 text-center`}>
-            Check out my spotlight
-        </h1>
+    <section className='flex flex-row pt-6 pb-16'>
+        <div className='flex-1 flex justify-center items-center flex-col'>
+            <h2>
+                Spotlight
+            </h2>
+            <p>
+                Check out my spotlight
+            </p>
 
-      <Button styles={`mt-10`} text='Spotlight &#160;&#160; &rarr;' />
-    </div>
+            <Button styles={`mt-10`}>
+                Spotlight &rarr;
+            </Button>
+        </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
-      <Image src='/img2.svg' alt='img2' width={330} height={495} />
-    </div>
+        <div className='flex-col relative flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative'>
+            <Image src='/img2.svg' alt='img2' width={330} height={495} />
+        </div>
   </section>
   )
 }
