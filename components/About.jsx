@@ -14,20 +14,20 @@ const About = () => {
 
     
 
-    <div className='flex-1 flex-col flex justify-between pb-14'>
+    <div className='flex flex-1 flex-col flex justify-between pb-14'>
       <div className='flex justify-start items-start'>
         <h1 className='text-[64px]'>
           About Joe Grater
         </h1>
       </div>
 
-      <div className='flex justify-start items-start'>
-        <p>
+      <div className='flex w-[646px] justify-start items-start py-16'>
+        <p className='font-normal text-[24px] leading-[30px] text-white text-left'>
             Since he was young, Joe has been creating little videos and skits for him to act in, and has excelled in the dramatics. Currently in his finial year at the prestigious Italia Conti, he plans to continue creating out in the industry and enjoy everything that comes his way.
         </p>
       </div>
       
-      <div className='flex justify-center items-center pt-10'>
+      <div className='flex justify-center items-center pt-6'>
         <Button>
             Reach Out
         </Button>

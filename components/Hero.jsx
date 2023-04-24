@@ -11,15 +11,15 @@ const Hero = () => {
       <Image src='/img1.svg' alt='img1' width={543} height={349} />
     </div>
 
-    <div className='flex-1 flex-col flex justify-center'>
+    <div className='flex-1 flex-col flex justify-center items-end'>
       <div className='flex justify-center items-center'>
         <h1 className='text-[64px]'>
           Joe Grater
         </h1>
       </div>
 
-      <div className='flex justify-center'>
-        <p className='text-[24px]'>
+      <div className='flex justify-center pt-[48px]'>
+        <p className='text-[24px] text-right'>
           Actor / Teacher based in <br/> London and Reading
         </p>
       </div>
