@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="bg-primary relative w-full overflow-hidden">
+    <div className="bg-primary relative w-full overflow-hidden z-0">
     
     <div className='bg-primary relative flex justify-center items-center pt-[80px] px-10 w-full'>
       <div className='max-w-[1229px] z-10'>

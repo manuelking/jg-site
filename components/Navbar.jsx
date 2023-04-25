@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className='sm:hidden flex flex-1 justify-end items-center'>
         <Image src={toggle ? '/close.svg' : '/menu.svg'} alt='menu' width={28} height={28} className='object-contain mr-10' onClick={() => setToggle((prev) => !prev)} />
 
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-10 max-w-[160px] rounded-xl sidebar`}>
+        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-10 max-w-[160px] rounded-xl sidebar z-10`}>
           <ul className='list-none flex flex-col justify-end items-center flex-1 mr-[202px]'>
           {navLinks.map((nav, index) => (
             <li key={nav.id} className={`font-normal cursor-pointer text-[20px] ${index === navLinks.length -1 ? 'mr-0' : 'mr-10'} text-nav mb-4`}>
