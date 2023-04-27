@@ -10,13 +10,8 @@ const contact = () => {
       <div className='max-w-[1229px] z-10'>
         <ContactMe />
         <FindMe />
-        <Hero />
-        <HeroSection />
-        <About />
       </div>   
-      
-      
-      </div>
+    </div>
       
     </div>
   )

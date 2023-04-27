@@ -4,12 +4,12 @@ import Button from './Button'
 
 const About = () => {
   return (
-    <section className='flex md:flex-row  relative flex-col-reverse py-20'>
+    <div className='flex md:flex-row relative flex-col-reverse pt-20'>
     
     <hr className='border-white absolute top-5 border-[1px] w-full max-w-[1029px]'/>
 
     <div className='flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative'>
-      <Image src='/img2.svg' alt='img2' width={330} height={495} />
+      <Image src='/img4.svg' alt='img4' width={328} height={493} />
     </div>
 
     
@@ -34,7 +34,7 @@ const About = () => {
       </div>
     </div>
       
-    </section>
+    </div>
   )
 }
 

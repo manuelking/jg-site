@@ -1,9 +1,4 @@
 export const navLinks = [
-  {
-    id: 'home',
-    title: 'Home',
-    link: '/',
-    },
     {
         id: 'contact',
         title: 'Contact',
@@ -116,5 +111,36 @@ export const socialMedia = [
       link: 'spotlight.com',
       width: '45',
       height: '46',
+    },
+  ];
+
+  export const gallery = [
+    {
+      id: "galimg-1",
+      img: './galimg1.svg',
+      name: "galimg1",
+      w: '261',
+      h: '288',
+    },
+    {
+      id: "galimg-2",
+      img: './galimg2.svg',
+      name: "galimg2",
+      w: '261',
+      h: '266',
+    },
+    {
+      id: "galimg-3",
+      img: './galimg3.svg',
+      name: "galimg3",
+      w: '244',
+      h: '288',
+    },
+    {
+      id: "galimg-4",
+      img: './galimg4.svg',
+      name: "galimg4",
+      w: '393',
+      h: '212',
     },
   ];
