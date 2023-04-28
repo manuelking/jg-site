@@ -7,8 +7,9 @@ const Hero = () => {
   return (
     <section className='flex md:flex-row flex-col-reverse py-6'>
 
-    <div className='flex-1 flex justify-end items-end md:mr-10 mr-0 md:mt-0 mt-10 relative'>
-      <Image src='/img1.svg' alt='img1' width={543} height={349} />
+    <div className='relative flex-col flex-1 flex justify-end items-end md:mr-10 mr-0 md:mt-0 mt-10 relative'>
+      <Image src='/img1.svg' alt='img1' width={543} height={349} className='z-10 -right-[30px] -top-[30px] absolute' />
+      <Image src='/img1sh.svg' alt='img1shadow' width={543} height={349} className='z-0' />
     </div>
 
     <div className='flex-1 flex-col flex justify-center items-end'>
