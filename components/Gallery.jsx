@@ -16,7 +16,7 @@ const Gallery = () => {
             </div>
 
             <div className='flex pt-[36px] items-center justify-center'>
-                <div className='grid grid-cols-3 items-center gap-y-[54px]'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-y-[54px]'>
                     <div className='flex justify-center'>
                         <Image src='/galimg1.svg' alt='galimg1' width={261} height={288} />
                     </div>

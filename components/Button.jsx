@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 const Button = ({ styles, children }) => (
-  <button type="button" className={`flex flex-row items-center justify-center justify-between py-4 px-6 w-[281px] h-[77px] border-[1px] border-solid bg-tertiary rounded-[30px] text-white font-normal`}>
+  <button type="button" className={`flex flex-row items-center justify-center justify-between py-4 px-6 border-[1px] border-solid bg-tertiary rounded-[30px] text-white font-normal ${styles}`}>
 
     <div className='flex flex-[1.5] items-center justify-center text-[24px] leading-[30px]'>
       {children}

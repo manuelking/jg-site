@@ -6,10 +6,10 @@ import React from 'react'
 const Footer = () => {
   return (
     <section className='flex flex-col'>
-      <div className='flex w-full justify-between items-center bg-tertiary px-[205px]'>
+      <div className='flex xs:flex-row flex-col w-full justify-between items-center bg-tertiary md:px-[205px] px-[105px] gap-x-10'>
         <div className='pt-[40px] pb-[54px]'>
           <h2 className='font-normal text-[20px] leading-[24px] text-[#001A5C]'>Joe Grater - Actor/ Teacher</h2>
-          <ul className='font-normal text-[16px] leading-[19px] text-black pt-[15px]'>
+          <ul className='font-normal text-[16px] leading-[19px] text-black pt-[15px] xs:text-left text-center'>
             <li>
               <Link href='/contact'>Contact</Link>
             </li>

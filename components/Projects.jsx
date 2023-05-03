@@ -27,7 +27,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className='flex-1 flex justify-start justify-between pb-[162px]'>
+            <div className='flex-1 flex gap-y-10 flex-wrap justify-start justify-between pb-[162px]'>
                 <Image src='/img6.svg' alt='img6' width={445} height={247} />
                 <Image src='/img7.svg' alt='img7' width={537} height={247} />
             </div>
@@ -48,7 +48,7 @@ const Projects = () => {
                     </h2>
                 </div>
 
-                <div className='flex w-[538px] h-[155]'>
+                <div className='flex max-w-[538px] h-[155]'>
                     <p className='font-light text-[20px] leading-[24px] text-white'>
                         Joe is currently in production for his playwriting debut “Coming Clean” which he is also directing. His hilarious short comedy which is due to be performed at the end of April, is about two student who decide to rob a house for money but if all goes wrong when the home owners get back early…
                     </p>
