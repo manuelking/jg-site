@@ -21,7 +21,7 @@ export default function Home() {
         </div>  
       </div>
       
-      <div className='absolute top-[515px] inset-y-0 right-0 max-w-full z-0 justify-end items-end'>
+      <div className='absolute md:top-[715px] sm:top-[1050px] top-[1350px] inset-y-0 right-0 max-w-full z-0 justify-end items-end'>
       <Image src='/gradient.svg' alt='gradient' width={700} height={475} className='' />
       </div>
 

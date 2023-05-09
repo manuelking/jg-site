@@ -2,9 +2,11 @@ import { navLinks } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
+  const router = useRouter()
 
   return (
     <div className='w-full flex py-6 justify-between items-center navbar bg-primary'>
@@ -15,7 +17,7 @@ const Navbar = () => {
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 lg:mr-[202px] sm:mr-[100px]'>
        {navLinks.map((nav, index) => (
         <li key={nav.id} className={`font-light cursor-pointer text-[20px] ${index === navLinks.length -1 ? 'mr-0' : 'mr-[73px]'} text-nav mr-12`}>
-          <Link href={nav.link}>{nav.title}</Link>
+          <Link className={router.pathname == nav.link ? 'underline underline-offset-2 decoration-1' : ''} href={nav.link}>{nav.title}</Link>
         </li>
        ))}
       </ul>
