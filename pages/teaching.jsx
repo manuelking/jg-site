@@ -3,7 +3,7 @@ import React from 'react'
 
 const teaching = () => {
   return (
-    <div className="bg-primary relative w-full overflow-hidden pb-[177px]">
+    <div className="bg-primary relative w-full overflow-hidden">
 
     <div className='z-10'>
       <Navbar />

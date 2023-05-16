@@ -17,7 +17,7 @@ const BookHero = () => {
         </div>
 
         <div className='flex flex-1 items-center justify-center py-[104px]'>
-            <p className='max-w-[566px] h-[87] font-normal text-[24px] leading-[29px] text-center text-white'>
+            <p className='max-w-[566px] h-[87] font-light text-[24px] leading-[29px] text-center text-white'>
                 Since I was 16 I've been teaching a variety of ages from young soon to be megastars, to those already in the industry who just want a refresher.
             </p>
         </div>

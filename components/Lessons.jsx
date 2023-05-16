@@ -261,33 +261,33 @@ const Lessons = () => {
             </div>
         </div>
 
-        <div className='flex-1 flex ss:flex-row flex-col gap-y-10 justify-start'>
-            <div className='flex items-center pr-[37px]'>
+        <div className='flex-1 flex ss:flex-row flex-col gap-y-10 sm:justify-start justify-center'>
+            <div className='flex ss:justify-start justify-center items-center ss:pr-[37px] pr-0'>
                 <div className='flex items-center justify-center bg-tertiary relative w-[115px] h-[115px] rounded-full'>
                     <Image src='./cost.svg' alt='cost' width={64} height={64} className='absolute' />
                 </div>
             </div>
-            <div className='flex flex-col justify-center'>
+            <div className='flex flex-col justify-center ss:items-start items-center'>
                 <h2 className='font-semibold text-[36px] leading-[44px] text-white pb-[17px]'>
                     Cost
                 </h2>
-                <p className='font-light text-[16px] leading-[20px] text-white'>
+                <p className='font-light text-[16px] leading-[20px] text-white ss:text-left text-center'>
                     Sessions will generally be £15 per hour, but the length of the session is completely up to you.
                 </p>
             </div>
         </div>
 
         <div className='flex flex-1 ss:flex-row flex-col gap-y-10 justify-start pt-[72px] pb-[151px]'>
-            <div className='flex items-center pr-[37px]'>
+            <div className='flex ss:justify-start justify-center items-center ss:pr-[37px] pr-0'>
                 <div className='flex items-center justify-center bg-tertiary relative w-[115px] h-[115px] rounded-full'>
                     <Image src='./ping.svg' alt='location' width={48} height={48} className='absolute' />
                 </div>
             </div>
-            <div className='flex flex-col justify-center min-w-[200px] max-w-[796px]'>
+            <div className='flex flex-col justify-center ss:items-start items-center min-w-[200px] max-w-[796px]'>
                 <h2 className='font-semibold text-[36px] leading-[44px] text-white pb-[17px]'>
                     Location
                 </h2>
-                <p className='font-light text-[16px] leading-[20px] text-white'>
+                <p className='font-light text-[16px] leading-[20px] text-white ss:text-left text-center'>
                     Private session will usually be held on zoom, but depending on your location and the session's needs I can come to you.
                 </p>
             </div>
@@ -297,8 +297,10 @@ const Lessons = () => {
             <p className='font-light text-[32px] leading-[40px] text-white text-center pb-[31px]'>
                 Bookings/ Inquiries: 
             </p>
-            <h2 className='font-semibold xs:text-[48px] text-[30px] leading-[58px] text-white text-center underline'>
-                joe@joegater.com
+            <h2 className='font-semibold xs:text-[48px] text-[30px] leading-[58px] text-white text-center underline cursor-pointer'>
+                <a href='mailto:joe@joegater.com'>
+                    joe@joegater.com
+                </a>
             </h2>
         </div>
 

@@ -10,16 +10,16 @@ const Video = () => {
         <div className='flex-1 flex-col flex justify-center items-center'>
 
           <div className='flex justify-center items-center'>
-            <h1 className='font-bold text-[36px] leading-[44px] text-center text-white'>
+            <h1 className='font-bold sm:text-[36px] text-[32px] leading-[44px] text-center text-white'>
               Videos
             </h1>
           </div>
 
           <div className='flex flex-col justify-center items-center pt-[39px] pb-[85px]'>
-            <p className='font-normal text-[20px] leading-[24px] text-center text-white'>
+            <p className='font-light sm:text-[20px] text-[16px] leading-[24px] text-center text-white'>
             Joe is always creating content for his YouTube channel which you can find here:
             </p>
-            <p className='font-normal text-[20px] leading-[24px] text-center text-white pt-6 underline'>
+            <p className='font-light sm:text-[20px] text-[14px] leading-[24px] text-center text-white pt-6 underline'>
               <Link href='https://youtube.com/@joergater6883'>
                 https://youtube.com/@joergater6883
               </Link>

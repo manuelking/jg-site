@@ -7,10 +7,10 @@ const ContactMe = () => {
   return (
     <section className='flex flex-col sm:flex-row pb-[25px]'>
         <div className='flex-[1.5] flex py-10 justify-start items-start flex-col'>
-            <h2 className={`${styles.heading2}`}>
+            <h2 className='font-normal text-[64px] leading-[77px] text-white'>
                 Contact Me
             </h2>
-            <p className='pt-[71px] text-normal text-white text-[24px] leading-[40px]'>
+            <p className='pt-[74px] font-light text-white text-[24px] leading-[30px]'>
                 Get in Touch
             </p>
         </div>

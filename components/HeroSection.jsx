@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import styles, { layout } from '@/styles'
 import Button from './Button'
+import Link from 'next/link'
 
 const HeroSection = () => {
   return (
@@ -10,13 +11,15 @@ const HeroSection = () => {
             <h2 className={`font-normal text-[64px] leading-[88px] text-white`}>
                 Spotlight
             </h2>
-            <p className='text-normal text-white text-[32px] leading-[40px] sm:text-left text-center'>
+            <p className='font-light text-white text-[32px] leading-[40px] sm:text-left text-center'>
                 Check out my spotlight
             </p>
 
-            <Button styles={`md:w-[281px] h-[77px] w-[251px]`}>
-                Spotlight
-            </Button>
+            <Link href='https://www.spotlight.com/1699-9052-7182'>
+                <Button styles={`md:w-[281px] h-[77px] w-[251px]`}>
+                    Spotlight
+                </Button>
+            </Link>
         </div>
 
         <div className='flex-col relative flex-1 flex justify-end sm:items-end items-center md:ml-10 ml-0 md:mt-0 mt-10 relative'>

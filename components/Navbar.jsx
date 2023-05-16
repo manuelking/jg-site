@@ -16,7 +16,7 @@ const Navbar = () => {
 
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 lg:mr-[202px] sm:mr-[100px]'>
        {navLinks.map((nav, index) => (
-        <li key={nav.id} className={`font-light cursor-pointer text-[20px] ${index === navLinks.length -1 ? 'mr-0' : 'mr-[73px]'} text-nav mr-12`}>
+        <li key={nav.id} className={`font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF] ${index === navLinks.length -1 ? 'mr-0' : 'mr-[73px]'} text-nav mr-12`}>
           <Link className={router.pathname == nav.link ? 'underline underline-offset-2 decoration-1' : ''} href={nav.link}>{nav.title}</Link>
         </li>
        ))}

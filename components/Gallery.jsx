@@ -9,7 +9,7 @@ const Gallery = () => {
         <div className='flex flex-col'>
 
             <div className='flex-1 flex-col flex justify-start items-start'>
-                    <h1 className='font-bold text-[64px] leading-[77px] text-white pb-[18px]'>
+                    <h1 className='font-bold ss:text-[64px] text-[60px] leading-[77px] text-white pb-[18px]'>
                         Gallery
                     </h1>
                     <hr className='border-white border-[1px] w-full max-w-[1029]'/>

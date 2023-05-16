@@ -4,7 +4,7 @@ import React from "react";
 const Button = ({ styles, children }) => (
   <button type="button" className={`flex flex-row items-center justify-center justify-between py-4 px-6 border-[1px] border-solid bg-tertiary rounded-[30px] text-white font-normal ${styles}`}>
 
-    <div className='flex flex-[1.5] items-center justify-center text-[24px] leading-[30px]'>
+    <div className='flex flex-[1.5] items-center justify-center text-[24px] leading-[30px] font-light text-white'>
       {children}
     </div>
 

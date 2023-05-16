@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
 
       <div className='flex justify-center pt-[48px]'>
-        <p className='font-normal text-[24px] leading-[29px] text-right text-white'>
+        <p className='font-light text-[24px] leading-[29px] text-right text-white'>
           Actor / Teacher based in <br className='xs:block hidden'/> London and Reading
         </p>
       </div>
