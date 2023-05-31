@@ -9,33 +9,66 @@ const Navbar = () => {
   const router = useRouter()
 
   return (
-    <div className='w-full flex py-6 justify-between items-center navbar bg-primary'>
-      <Link href='/'>
-        <Image src='/logo.png' alt='logo' width={141} height={136} className='lg:ml-[202px] sm:ml-14 xx:ml-10'/>
+    <div className="w-full flex py-6 justify-between items-center navbar bg-primary">
+      <Link href="/">
+        <Image
+          src="/logosvg.svg"
+          alt="logo"
+          width={141}
+          height={136}
+          className="lg:ml-[202px] sm:ml-14 xx:ml-10"
+        />
       </Link>
 
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1 lg:mr-[202px] sm:mr-[100px]'>
-       {navLinks.map((nav, index) => (
-        <li key={nav.id} className={`font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF] ${index === navLinks.length -1 ? 'mr-0' : 'mr-[73px]'} text-nav mr-12`}>
-          <Link className={router.pathname == nav.link ? 'underline underline-offset-2 decoration-1' : ''} href={nav.link}>{nav.title}</Link>
-        </li>
-       ))}
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 lg:mr-[202px] sm:mr-[100px]">
+        {navLinks.map((nav, index) => (
+          <li
+            key={nav.id}
+            className={`font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF] ${
+              index === navLinks.length - 1 ? 'mr-0' : 'mr-[73px]'
+            } text-nav mr-12`}
+          >
+            <Link
+              className={
+                router.pathname == nav.link
+                  ? 'underline underline-offset-2 decoration-1'
+                  : ''
+              }
+              href={nav.link}
+            >
+              {nav.title}
+            </Link>
+          </li>
+        ))}
       </ul>
 
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
-        <Image src={toggle ? '/close.svg' : '/menu.svg'} alt='menu' width={28} height={28} className='object-contain mr-10' onClick={() => setToggle((prev) => !prev)} />
+      <div className="sm:hidden flex flex-1 justify-end items-center">
+        <Image
+          src={toggle ? '/close.svg' : '/menu.svg'}
+          alt="menu"
+          width={28}
+          height={28}
+          className="object-contain mr-10"
+          onClick={() => setToggle((prev) => !prev)}
+        />
 
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-10 max-w-[160px] rounded-xl sidebar z-20`}>
-          <ul className='list-none flex flex-col justify-end items-center flex-1 mr-[202px]'>
-          {navLinks.map((nav, index) => (
-            <li key={nav.id} className={`font-normal cursor-pointer text-[20px] ${index === navLinks.length -1 ? 'mr-0' : 'mr-10'} text-nav mb-4`}>
-              <Link href={nav.link}>{nav.title}</Link>
-            </li>
-          ))}
+        <div
+          className={`${
+            toggle ? 'flex' : 'hidden'
+          } p-6 bg-tertiary absolute top-20 right-0 mx-4 my-10 min-w-[160px] rounded-xl sidebar z-20`}
+        >
+          <ul className="list-none flex flex-col justify-end items-center flex-1">
+            {navLinks.map((nav, index) => (
+              <li
+                key={nav.id}
+                className={`font-normal cursor-pointer text-[20px] text-nav mb-4`}
+              >
+                <Link href={nav.link}>{nav.title}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-
     </div>
   )
 }
