@@ -23,7 +23,7 @@ const HeroSection = () => {
       </div>
 
       <div className="flex-col relative flex-1 flex justify-end sm:items-end items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
-        <Image src="/img2.svg" alt="img2" width={330} height={495} />
+        <Image src="/img1.svg" alt="img1" width={543} height={349} />
       </div>
     </section>
   )

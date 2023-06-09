@@ -42,17 +42,14 @@ const news = () => {
             <div className="flex flex-1 flex-col justify-center sm:items-start items-start">
               <div className="flex md:pb-[39px] pb-[19px]">
                 <h2 className="font-bold md:text-[36px] text-[32px] leading-[44px] text-white">
-                  Debut Play
+                  Writing
                 </h2>
               </div>
 
               <div className="flex max-w-[538px] h-[155]">
-                <p className="font-light md:text-[20px] text-[16px] leading-[24px] text-white">
-                  Joe is currently in production for his playwriting debut
-                  “Coming Clean” which he is also directing. His hilarious short
-                  comedy which is due to be performed at the end of April, is
-                  about two student who decide to rob a house for money but if
-                  all goes wrong when the home owners get back early…
+                <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white">
+                  Joe is currently developing multiple screenplays with a
+                  handful of exciting people.
                 </p>
               </div>
             </div>

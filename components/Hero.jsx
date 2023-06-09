@@ -6,24 +6,17 @@ import Button from './Button'
 const Hero = () => {
   return (
     <section className="flex md:flex-row gap-y-16 flex-col-reverse py-6 ">
-      <div className="relative flex-col flex md:justify-end justify-center md:items-end items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
+      <div className="relative flex-col flex flex-1 md:justify-end justify-center md:items-start items-center">
         <Image
-          src="/img1.svg"
-          alt="img1"
-          width={543}
-          height={349}
-          className="z-10 md:-right-[30px] md:-top-[30px] sm:-right-[-160px] sm:-top-[30px] absolute"
-        />
-        <Image
-          src="/img1sh.svg"
-          alt="img1shadow"
-          width={543}
-          height={349}
+          src="/img2.svg"
+          alt="img2"
+          width={330}
+          height={495}
           className="z-0"
         />
       </div>
 
-      <div className="flex-1 flex-col flex justify-center md:items-end items-center">
+      <div className="flex flex-1 flex-col justify-center md:items-center items-center">
         <div className="flex justify-center items-center">
           <h1 className="font-normal text-[64px] leading-[80px] text-white">
             Joe Gater
@@ -42,3 +35,19 @@ const Hero = () => {
 }
 
 export default Hero
+
+// <Image
+//           src="/img1sh.svg"
+//           alt="img1shadow"
+//           width={543}
+//           height={349}
+//           className="z-0"
+//         />
+
+// <Image
+//           src="/img2.svg"
+//           alt="img2"
+//           width={330}
+//           height={495}
+//           className="z-10 md:-right-[30px] md:-top-[30px] sm:-right-[-160px] sm:-top-[30px] absolute"
+//         />

@@ -21,6 +21,47 @@ export const navLinks = [
   },
 ]
 
+export const menuLinks = [
+  {
+    id: 'home',
+    title: 'Home',
+    link: '/',
+  },
+  {
+    id: 'contact',
+    title: 'Contact',
+    link: '/contact',
+  },
+  {
+    id: 'news',
+    title: 'News',
+    link: '/news',
+  },
+  {
+    id: 'cv',
+    title: 'CV',
+    link: '/cv',
+  },
+  {
+    id: 'teaching',
+    title: 'Teaching',
+    link: '/teaching',
+  },
+]
+
+export const cvLinks = [
+  {
+    id: 'cv-link1',
+    title: 'Acting CV',
+    link: 'https://drive.google.com/file/d/1wbWApTWfCGrvmlKmpD8ACm-ZpvbPUy9I/view',
+  },
+  {
+    id: 'cv-link2',
+    title: 'Teaching CV',
+    link: 'https://drive.google.com/file/d/1Aohoa1pwMwoEQSuChukHSkCve6yyI6zC/view',
+  },
+]
+
 export const socialMedia = [
   {
     id: 'sm-1',
@@ -103,14 +144,6 @@ export const contacts = [
     link: 'https://www.instagram.com/joegater_/?igshid=YmMyMTA2M2Y%3D',
     width: '47',
     height: '49',
-  },
-  {
-    id: 'contact-6',
-    icon: './icon-ph.svg',
-    name: '07111 12345',
-    link: 'tel:07111 12345',
-    width: '45',
-    height: '46',
   },
 ]
 
