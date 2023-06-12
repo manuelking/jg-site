@@ -9,6 +9,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const [toggleCV, setToggleCV] = useState(false)
+  const [toggleMidScreen, setToggleMidScreen] = useState(false)
   const router = useRouter()
 
   return (
@@ -37,7 +38,7 @@ const Navbar = () => {
                   {nav.title}
                 </p>
                 <div
-                  className={`group-hover:block hidden p-6 bg-tertiary absolute min-w-[160px] rounded-xl sidebar z-20 top-6 -right-[68px]`}
+                  className={`group-hover:block hidden p-6 bg-tertiary absolute min-w-[460px] rounded-b-xl sidebar z-20 top-6 -right-[68px]`}
                 >
                   <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-2">
                     {cvLinks.map((nav, index) => (

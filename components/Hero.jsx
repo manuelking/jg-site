@@ -5,8 +5,8 @@ import Button from './Button'
 
 const Hero = () => {
   return (
-    <section className="flex md:flex-row gap-y-16 flex-col-reverse py-6 ">
-      <div className="relative flex-col flex flex-1 md:justify-end justify-center md:items-start items-center">
+    <section className="flex sm:flex-row gap-y-16 flex-col-reverse py-6 ">
+      <div className="relative flex-col flex flex-1 md:justify-end justify-center sm:items-start items-center">
         <Image
           src="/img2.svg"
           alt="img2"
@@ -16,15 +16,15 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex flex-1 flex-col justify-center md:items-center items-center">
+      <div className="flex flex-1 flex-col justify-center sm:items-end items-center">
         <div className="flex justify-center items-center">
-          <h1 className="font-normal text-[64px] leading-[80px] text-white">
+          <h1 className="font-normal sm:text-[64px] text-[54px] leading-[80px] text-white">
             Joe Gater
           </h1>
         </div>
 
         <div className="flex justify-center pt-[48px]">
-          <p className="font-light text-[24px] leading-[29px] ss:text-right text-center text-white">
+          <p className="font-light sm:text-[24px] text-[20px] leading-[29px] ss:text-right text-center text-white">
             Actor / Teacher based in <br className="xs:block hidden" /> London
             and Reading
           </p>
