@@ -1,20 +1,13 @@
-import {
-  About,
-  Footer,
-  Gallery,
-  Hero,
-  HeroSection,
-  Navbar,
-  Projects,
-  Video,
-} from '@/components'
+import { Footer, Gallery, Navbar, Projects, Video } from '@/components'
+import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import React from 'react'
 
 const news = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
-      <div className="z-10">
+      <NextSeo title="News - Joe Gater" />
+      <div className="z-10 px-10">
         <Navbar />
       </div>
 

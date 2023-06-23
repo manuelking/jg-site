@@ -9,64 +9,67 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const [toggleCV, setToggleCV] = useState(false)
-  const [toggleMidScreen, setToggleMidScreen] = useState(false)
   const router = useRouter()
 
   return (
-    <div className="w-full flex py-6 justify-between items-center navbar bg-primary">
-      <Link href="/">
-        <Image
-          src="/logosvg.svg"
-          alt="logo"
-          width={141}
-          height={136}
-          className="lg:ml-[202px] sm:ml-14 xx:ml-10"
-        />
-      </Link>
-
-      <ul className="list-none sd:flex hidden justify-end items-center flex-1 lg:mr-[202px] sm:mr-[100px]">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF] ${
-              index === navLinks.length - 1 ? 'mr-0' : 'mr-[73px]'
-            } text-nav mr-12`}
-          >
-            {nav.title === 'CV' ? (
-              <div className="group relative">
-                <p className="font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF]">
-                  {nav.title}
-                </p>
-                <div
-                  className={`group-hover:block hidden p-6 bg-tertiary absolute min-w-[460px] rounded-b-xl sidebar z-20 top-6 -right-[68px]`}
-                >
-                  <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-2">
-                    {cvLinks.map((nav, index) => (
-                      <li
-                        key={nav.id}
-                        className={`font-normal cursor-pointer text-[16px] text-nav `}
-                      >
-                        <Link href={nav.link}>{nav.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
+    <div className="flex py-6 justify-between w-full mx-auto max-w-[1029px] navbar bg-primary">
+      <div className="flex">
+        <Link href="/">
+          <Image
+            src="/logosvg.svg"
+            alt="logo"
+            width={141}
+            height={136}
+            priority
+          />
+        </Link>
+      </div>
+      <div className="flex">
+        <ul className="list-none sd:flex hidden justify-end items-center flex-1 ">
+          {navLinks.map((nav, index) => (
+            <li
+              key={nav.id}
+              className={`font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF] ml-[73px]`}
+            >
+              {nav.title === 'CV' ? (
+                <div className="group relative">
+                  <p className="font-light cursor-pointer text-[20px] leading-[25px] text-[#C7D6FF]">
+                    {nav.title}
+                  </p>
+                  <div className="flex flex-col">
+                    <div className="group-hover:block hidden py-6 bg-tertiary absolute min-w-[160px] rounded-b-xl sidebar z-20 -right-[68px]" />
+                    <div
+                      className={`group-hover:block hidden p-6 bg-tertiary absolute min-w-[160px] rounded-b-xl sidebar z-20 -right-[68px]`}
+                    >
+                      <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-2">
+                        {cvLinks.map((nav, index) => (
+                          <li
+                            key={nav.id}
+                            className={`font-normal cursor-pointer text-[16px] text-nav `}
+                          >
+                            <Link href={nav.link}>{nav.title}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <Link
-                className={
-                  router.pathname == nav.link
-                    ? 'underline underline-offset-2 decoration-1'
-                    : ''
-                }
-                href={nav.link}
-              >
-                {nav.title}
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
+              ) : (
+                <Link
+                  className={
+                    router.pathname == nav.link
+                      ? 'underline underline-offset-2 decoration-1'
+                      : ''
+                  }
+                  href={nav.link}
+                >
+                  {nav.title}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="sd:hidden flex flex-1 justify-end items-center">
         <Image
@@ -74,7 +77,7 @@ const Navbar = () => {
           alt="menu"
           width={28}
           height={28}
-          className="object-contain mr-10"
+          className="object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
 

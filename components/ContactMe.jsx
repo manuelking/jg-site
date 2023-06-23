@@ -1,7 +1,4 @@
-import styles from '@/styles'
 import Image from 'next/image'
-import React from 'react'
-import { Button } from './index'
 
 const ContactMe = () => {
   return (
@@ -15,7 +12,7 @@ const ContactMe = () => {
         </p>
       </div>
 
-      <div className="flex-col relative flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
+      <div className="flex-col flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
         <Image
           src="/img3.svg"
           alt="img3"

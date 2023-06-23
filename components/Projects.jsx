@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
-import { Button } from '.'
 
 const Projects = () => {
   return (
@@ -22,7 +20,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-10 justify-start sm:items-start items-center justify-between">
+        <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-10 sm:items-start items-center justify-between">
           <div>
             <Image src="/img6.svg" alt="img6" width={445} height={247} />
           </div>

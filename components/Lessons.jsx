@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 
 const Lessons = () => {
   return (
@@ -17,7 +16,7 @@ const Lessons = () => {
           </div>
         </div>
         <div className="flex items-center sm:justify-start justify-center">
-          <h2 className="font-bold text-[36px] leading-[44px] text-white">
+          <h2 className="font-bold sm:text-left text-center text-[36px] leading-[44px] text-white">
             What I Teach
           </h2>
         </div>
@@ -32,14 +31,14 @@ const Lessons = () => {
           </div>
 
           <div className="flex md:flex-row flex-col gap-y-16 justify-between justify-center items-center pb-[52px]">
-            <div className="xs:w-[381px] w-[281px] xs:h-[390px] h-[430px] bg-white rounded-[30px] relative flex justify-center">
-              <div className="bg-tertiary xs:w-[303px] w-[203px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
-                <h2 className="font-normal text-[24px] leading-[29px] text-white flex items-center justify-center text-center">
+            <div className="xs:w-[381px] xx:w-[281px] w-[231px] xs:h-[390px] h-[430px] bg-white rounded-[30px] relative flex justify-center">
+              <div className="bg-tertiary xs:w-[303px] xx:w-[203px] w-[170px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
+                <h2 className="font-normal xx:text-[24px] text-[18px] leading-[29px] text-white flex items-center justify-center text-center">
                   Acting
                 </h2>
               </div>
 
-              <div className="flex flex-col xs:w-[303px] w-[203px]">
+              <div className="flex flex-col xs:w-[303px] w-[190px]">
                 <div className="flex flex-row justify-between pt-[37px] w-full">
                   <div className="flex">
                     <h2 className="font-semibold text-[18px] leading-[22px] text-[#0047FF] ">
@@ -82,9 +81,9 @@ const Lessons = () => {
               </div>
             </div>
 
-            <div className="xs:w-[381px] w-[281px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
-              <div className="bg-tertiary xs:w-[303px] w-[203px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
-                <h2 className="font-normal text-[24px] leading-[29px] text-white flex items-center justify-center text-center">
+            <div className="xs:w-[381px] xx:w-[281px] w-[231px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
+              <div className="bg-tertiary xs:w-[303px] xx:w-[203px] w-[170px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
+                <h2 className="font-normal xx:text-[24px] text-[18px] leading-[29px] text-white flex items-center justify-center text-center">
                   Street Dance
                 </h2>
               </div>
@@ -137,9 +136,9 @@ const Lessons = () => {
           </div>
 
           <div className="flex md:flex-row flex-col gap-y-16 justify-between justify-center items-center pb-[52px]">
-            <div className="xs:w-[381px] w-[281px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
-              <div className="bg-tertiary xs:w-[303px] w-[203px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
-                <h2 className="font-normal text-[24px] leading-[29px] text-white flex items-center justify-center text-center">
+            <div className="xs:w-[381px] xx:w-[281px] w-[231px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
+              <div className="bg-tertiary xs:w-[303px] xx:w-[203px] w-[170px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
+                <h2 className="font-normal xx:text-[24px] text-[18px] leading-[29px] text-white flex items-center justify-center text-center">
                   Singing
                 </h2>
               </div>
@@ -180,9 +179,9 @@ const Lessons = () => {
               </div>
             </div>
 
-            <div className="xs:w-[381px] w-[281px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
-              <div className="bg-tertiary xs:w-[303px] w-[203px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
-                <h2 className="font-normal text-[24px] leading-[29px] text-white flex items-center justify-center text-center">
+            <div className="xs:w-[381px] xx:w-[281px] w-[231px] h-[390px] bg-white rounded-[30px] relative flex justify-center">
+              <div className="bg-tertiary xs:w-[303px] xx:w-[203px] w-[170px] h-[37px] absolute rounded-[30px] items-center justify-center flex -top-[15px]">
+                <h2 className="font-normal xx:text-[24px] text-[18px] leading-[29px] text-white flex items-center justify-center text-center">
                   Public Speaking
                 </h2>
               </div>

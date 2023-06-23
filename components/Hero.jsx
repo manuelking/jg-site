@@ -1,7 +1,5 @@
 import React from 'react'
-import styles, { layout } from '@/styles'
 import Image from 'next/image'
-import Button from './Button'
 
 const Hero = () => {
   return (
@@ -35,19 +33,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// <Image
-//           src="/img1sh.svg"
-//           alt="img1shadow"
-//           width={543}
-//           height={349}
-//           className="z-0"
-//         />
-
-// <Image
-//           src="/img2.svg"
-//           alt="img2"
-//           width={330}
-//           height={495}
-//           className="z-10 md:-right-[30px] md:-top-[30px] sm:-right-[-160px] sm:-top-[30px] absolute"
-//         />
