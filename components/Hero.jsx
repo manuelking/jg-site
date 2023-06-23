@@ -4,7 +4,16 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <section className="flex sm:flex-row gap-y-16 flex-col-reverse py-6 ">
-      <div className="relative flex-col flex flex-1 md:justify-end justify-center sm:items-start items-center"></div>
+      <div className="relative flex-col flex flex-1 md:justify-end justify-center sm:items-start items-center">
+        <Image
+          src="/img22.svg"
+          alt="Joe Gater Image 2"
+          width={330}
+          height={495}
+          priority
+          className="z-0"
+        />
+      </div>
 
       <div className="flex flex-1 flex-col justify-center sm:items-end items-center">
         <div className="flex justify-center items-center">
