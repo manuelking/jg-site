@@ -10,6 +10,7 @@ const Hero = () => {
           alt="img2"
           width={330}
           height={495}
+          priority
           className="z-0"
         />
       </div>
