@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="flex sm:flex-row gap-y-16 flex-col-reverse py-6 ">
       <div className="relative flex-col flex flex-1 md:justify-end justify-center sm:items-start items-center">
         <Image
-          src="/img22.svg"
+          src="/img22.png"
           alt="Joe Gater Image 2"
           width={330}
           height={495}
