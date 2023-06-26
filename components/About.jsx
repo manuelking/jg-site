@@ -9,7 +9,7 @@ const About = () => {
       <hr className="border-white absolute top-5 border-[1px] w-full max-w-[1029px]" />
 
       <div className="flex-1 flex sm:justify-start sm:items-start justify-center items-center relative">
-        <Image src="/img4.svg" alt="img4" width={328} height={493} priority />
+        <Image src="/img4.svg" alt="img4" width={308} height={473} priority />
       </div>
 
       <div className="flex flex-1 flex-col justify-between">
