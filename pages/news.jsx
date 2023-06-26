@@ -32,7 +32,7 @@ const news = () => {
         <div className="max-w-[1029px] w-full z-0">
           <div className="flex justify-center items-center sm:flex-row relative flex-col-reverse md:gap-x-0 gap-x-10">
             <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
-              <Image src="/img8.svg" alt="img8" width={444} height={334} />
+              <Image src="/img8.svg" alt="img8" width={414} height={304} />
             </div>
 
             <div className="flex flex-1 flex-col justify-center sm:items-start items-start">

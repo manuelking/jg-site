@@ -25,7 +25,7 @@ const Projects = () => {
             <Image src="/img6.svg" alt="img6" width={445} height={247} />
           </div>
           <div>
-            <Image src="/img7.svg" alt="img7" width={537} height={247} />
+            <Image src="/img7.svg" alt="img7" width={507} height={217} />
           </div>
         </div>
       </div>
