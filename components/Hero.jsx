@@ -10,8 +10,8 @@ const Hero = () => {
           alt="Joe Gater Image 2"
           width={330}
           height={495}
-          priority
           className="z-0 fill"
+          loading="lazy"
         />
       </div>
 
