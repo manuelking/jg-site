@@ -8,8 +8,8 @@ const Hero = () => {
         <Image
           src="/img2.svg"
           alt="Joe Gater Image 2"
-          width={300}
-          height={465}
+          width={200}
+          height={365}
           className="z-0 fill"
           priority
         />
