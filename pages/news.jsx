@@ -6,7 +6,10 @@ import React from 'react'
 const news = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
-      <NextSeo title="News - Joe Gater" />
+      <NextSeo
+        title="News - Joe Gater"
+        description="Stay updated on Joe's exciting ventures in filmmaking! Explore his screenplays and collaborations with director Tom Neo on thrilling projects in front and behind the camera. Get the latest news now!"
+      />
       <div className="z-10 px-10">
         <Navbar />
       </div>

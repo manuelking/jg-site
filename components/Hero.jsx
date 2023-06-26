@@ -11,7 +11,7 @@ const Hero = () => {
           width={330}
           height={495}
           className="z-0 fill"
-          loading="lazy"
+          priority
         />
       </div>
 

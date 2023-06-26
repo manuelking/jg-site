@@ -8,7 +8,10 @@ import { NextSeo } from 'next-seo'
 export default function Home() {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
-      <NextSeo title="Joe Gater Actor & Teacher" />
+      <NextSeo
+        title="Joe Gater Actor & Teacher"
+        description="Looking to connect with actor and acting teacher Joe Gater? Reach out via Spotlight, email, Instagram, Twitter, or YouTube, and explore exciting opportunities in the world of acting."
+      />
       <div className="px-10">
         <Navbar />
       </div>

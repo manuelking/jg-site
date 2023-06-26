@@ -5,7 +5,7 @@ import React from 'react'
 const teaching = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
-      <NextSeo title="Teaching - Joe Gater" />
+      <NextSeo title="Teaching - Joe Gater" description="" />
       <div className="z-10 px-10">
         <Navbar />
       </div>

@@ -5,7 +5,10 @@ import React from 'react'
 const contact = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden ">
-      <NextSeo title="Contact - Joe Gater" />
+      <NextSeo
+        title="Contact - Joe Gater"
+        description="Connect with actor and teacher Joe Gater via Spotlight, email, Instagram, Twitter, or YouTube for exciting acting opportunities."
+      />
       <div className="z-10 px-10">
         <Navbar />
       </div>
