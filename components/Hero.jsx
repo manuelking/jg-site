@@ -12,7 +12,6 @@ const Hero = () => {
           height={495}
           className="z-0 fill"
           priority={true}
-          quality={10}
           style={{ objectFit: 'contain' }}
         />
       </div>
