@@ -12,7 +12,6 @@ const Hero = () => {
           height={495}
           className="z-0 fill"
           priority={true}
-          fill={true}
           quality={80}
         />
       </div>
