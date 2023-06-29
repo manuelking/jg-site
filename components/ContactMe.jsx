@@ -16,15 +16,17 @@ const ContactMe = () => {
         <Image
           src="/img3.svg"
           alt="img3"
-          width={276}
-          height={430}
+          width={306}
+          height={460}
           className="z-10"
+          priority={true}
+          style={{ objectFit: 'contain' }}
         />
         <Image
           src="/img3outline.svg"
           alt="img3outline"
-          width={276}
-          height={430}
+          width={306}
+          height={460}
           className="absolute z-0 sm:-right-[14px] sm:-bottom-[25px] -right-[15px] -bottom-[15px]"
         />
       </div>
