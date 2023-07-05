@@ -12,37 +12,60 @@ const Gallery = () => {
         </div>
 
         <div className="flex pt-[36px] items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-y-[54px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-y-[54px] gap-x-10">
             <div className="flex justify-center">
               <Image
                 src="/galimg1.svg"
-                alt="galimg1"
+                alt="Gallery Image 1"
                 width={261}
                 height={288}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
               />
             </div>
             <div className="flex justify-center">
               <Image
                 src="/galimg2.svg"
-                alt="galimg2"
+                alt="Gallery Image 2"
                 width={261}
                 height={266}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
               />
             </div>
             <div className="flex justify-center">
               <Image
                 src="/galimg3.svg"
-                alt="galimg3"
+                alt="Gallery Image 3"
                 width={244}
                 height={288}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
+              />
+            </div>
+
+            <div className="flex justify-center">
+              <Image
+                src="/galimg4us.png"
+                alt="Gallery Image 4"
+                width={393}
+                height={212}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
               />
             </div>
             <div className="flex justify-center">
               <Image
-                src="/galimg4.svg"
-                alt="galimg4"
+                src="/galimg5.jpeg"
+                alt="Gallery Image 5"
                 width={393}
                 height={212}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
+              />
+            </div>
+            <div className="flex justify-center">
+              <Image
+                src="/galimg6.jpeg"
+                alt="Gallery Image 6"
+                width={393}
+                height={212}
+                className="hover:scale-125 transition duration-500 cursor-pointer "
               />
             </div>
           </div>

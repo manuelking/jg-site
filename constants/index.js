@@ -58,7 +58,7 @@ export const cvLinks = [
   {
     id: 'cv-link2',
     title: 'Teaching CV',
-    link: 'https://drive.google.com/file/d/1Aohoa1pwMwoEQSuChukHSkCve6yyI6zC/view',
+    link: 'https://drive.google.com/file/d/1Csjm4Mwp7Mb2TAkqIp_DYNw5f4zxhwE0iC1p_-ouqpI/edit',
   },
 ]
 

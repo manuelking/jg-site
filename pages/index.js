@@ -10,7 +10,7 @@ export default function Home() {
     <div className="bg-primary relative w-full overflow-hidden">
       <NextSeo
         title="Joe Gater Actor & Teacher"
-        description="Looking to connect with actor and acting teacher Joe Gater? Reach out via Spotlight, email, Instagram, Twitter, or YouTube, and explore exciting opportunities in the world of acting."
+        description="Explore exciting acting opportunities with Joe Gater. Connect via Spotlight, email, Instagram, Twitter, or YouTube for a teching session."
       />
       <div className="px-10">
         <Navbar />
