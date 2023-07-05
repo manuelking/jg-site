@@ -53,12 +53,12 @@ export const cvLinks = [
   {
     id: 'cv-link1',
     title: 'Acting CV',
-    link: 'https://drive.google.com/file/d/1wbWApTWfCGrvmlKmpD8ACm-ZpvbPUy9I/view',
+    link: 'https://docs.google.com/document/d/1x35jVThSZrSO7jGxYJr-wJ7WTCMqkfwrTpP14UYMLY8/edit',
   },
   {
     id: 'cv-link2',
     title: 'Teaching CV',
-    link: 'https://drive.google.com/file/d/1Csjm4Mwp7Mb2TAkqIp_DYNw5f4zxhwE0iC1p_-ouqpI/edit',
+    link: 'https://docs.google.com/document/d/1U8Jxn2eg6iNKS2blHK8YA_nnnbCM54X4Tj2JC4a_8Ik/edit',
   },
 ]
 
