@@ -47,7 +47,11 @@ const Navbar = () => {
                             key={nav.id}
                             className={`font-normal cursor-pointer text-[16px] text-nav `}
                           >
-                            <Link href={nav.link}>{nav.title}</Link>
+                            <Link href={nav.link} passHref legacyBehavior>
+                              <a target="_blank" rel="noopener noreferrer">
+                                {nav.title}
+                              </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
