@@ -4,6 +4,7 @@ import About from '@/components/About'
 import Image from 'next/image'
 import { Footer, Navbar } from '@/components'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -35,8 +36,19 @@ export default function Home() {
       </div>
 
       <div className="bg-primary relative flex justify-center items-center px-10 pb-[177px]">
-        <div className="max-w-[1029px] w-full z-10">
-          <p className="text-center">Want to know More? Download my CV</p>
+        <div className="max-w-[900px] w-full z-10">
+          <div className="flex ss:flex-row ss:gap-y-0 gap-y-8 flex-col justify-between">
+            <div className="flex flex-col ss:items-start items-center">
+              <p className="font-normal md:text-[24px] text-[18px]">
+                Want to know More?
+              </p>
+              <h1 className="md:text-[44px] text-[34px]">Download my CV</h1>
+            </div>
+            <div className="flex flex-col justify-center space-y-6 font-light text-[20px] text-[#C7D6FF] ss:text-left text-center">
+              <Link href="/">Acting CV</Link>
+              <Link href="/">Teaching CV</Link>
+            </div>
+          </div>
         </div>
       </div>
 
