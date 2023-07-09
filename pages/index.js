@@ -45,8 +45,24 @@ export default function Home() {
               <h1 className="md:text-[44px] text-[34px]">Download my CV</h1>
             </div>
             <div className="flex flex-col justify-center space-y-6 font-light text-[20px] text-[#C7D6FF] ss:text-left text-center">
-              <Link href="/">Acting CV</Link>
-              <Link href="/">Teaching CV</Link>
+              <Link href="/jg-actingcv.pdf" passHref legacyBehavior>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="joegater-actingcv"
+                >
+                  Acting CV
+                </a>
+              </Link>
+              <Link href="/jg-teachingcv.pdf" passHref legacyBehavior>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="joegater-teachingcv"
+                >
+                  Teaching CV
+                </a>
+              </Link>
             </div>
           </div>
         </div>

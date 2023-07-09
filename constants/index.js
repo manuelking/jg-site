@@ -53,12 +53,12 @@ export const cvLinks = [
   {
     id: 'cv-link1',
     title: 'Acting CV',
-    link: 'https://docs.google.com/document/d/1x35jVThSZrSO7jGxYJr-wJ7WTCMqkfwrTpP14UYMLY8/edit',
+    link: '/jg-actingcv.pdf',
   },
   {
     id: 'cv-link2',
     title: 'Teaching CV',
-    link: 'https://docs.google.com/document/d/1U8Jxn2eg6iNKS2blHK8YA_nnnbCM54X4Tj2JC4a_8Ik/edit',
+    link: '/jg-teachingcv.pdf',
   },
 ]
 
@@ -177,3 +177,14 @@ export const gallery = [
     h: '212',
   },
 ]
+
+// {
+//   id: 'cv-link1',
+//   title: 'Acting CV',
+//   link: 'https://docs.google.com/document/d/1x35jVThSZrSO7jGxYJr-wJ7WTCMqkfwrTpP14UYMLY8/edit',
+// },
+// {
+//   id: 'cv-link2',
+//   title: 'Teaching CV',
+//   link: 'https://docs.google.com/document/d/1U8Jxn2eg6iNKS2blHK8YA_nnnbCM54X4Tj2JC4a_8Ik/edit',
+// },
