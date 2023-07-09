@@ -16,7 +16,7 @@ export default function Home() {
         <Navbar />
       </div>
 
-      <div className="bg-primary relative flex justify-center items-center pt-[80px] px-10 pb-[177px]">
+      <div className="bg-primary relative flex justify-center items-center pt-[80px] px-10 pb-[77px]">
         <div className="max-w-[1029px] w-full z-10">
           <Hero />
           <HeroSection />
@@ -32,6 +32,12 @@ export default function Home() {
           height={475}
           className=""
         />
+      </div>
+
+      <div className="bg-primary relative flex justify-center items-center px-10 pb-[177px]">
+        <div className="max-w-[1029px] w-full z-10">
+          <p className="text-center">Want to know More? Download my CV</p>
+        </div>
       </div>
 
       <div>
