@@ -43,12 +43,12 @@ const news = () => {
                 </div>
               </div>
 
-              <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-20 sm:items-start items-center">
+              <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-16 sm:items-start items-center">
                 <div>
                   <Image
-                    src="/lluk-1.jpeg"
+                    src="/lluk-11.jpg"
                     alt="LaplandUK1"
-                    width={300}
+                    width={450}
                     height={533}
                   />
                 </div>
