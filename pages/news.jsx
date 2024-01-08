@@ -3,6 +3,28 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import React from 'react'
 
+const history = [
+  {
+    title: 'LapLandUK',
+    desc: 'Joe is officially a Lapland folk, and delighted to announce that he will be spending the Christmas season at LapLandUK. Him and his new friend Conker hope to get up to lots of mischief together!',
+    image: '',
+  },
+  {
+    title: 'LapLandUK',
+    desc: 'Joe is officially a Lapland folk, and delighted to announce that he will be spending the Christmas season at LapLandUK. Him and his new friend Conker hope to get up to lots of mischief together!',
+    image: '',
+  },
+  {
+    title: 'LapLandUK',
+    desc: 'Joe is officially a Lapland folk, and delighted to announce that he will be spending the Christmas season at LapLandUK. Him and his new friend Conker hope to get up to lots of mischief together!',
+    image: '',
+  },
+]
+
+// can change image to an array of images if i want to display multiple at a time
+
+//max-w-[900px] w-[900px]
+
 const news = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
@@ -22,6 +44,7 @@ const news = () => {
         </div>
       </div>
 
+      {/* Disneyland Paris news section */}
       <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <div className="flex flex-col">
@@ -29,37 +52,26 @@ const news = () => {
               <div className="flex-1 flex-col flex justify-center items-start">
                 <div className="flex justify-center">
                   <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
-                    LapLandUK
+                    Disneyland Paris
                   </h2>
                 </div>
 
                 <div className="flex justify-center pt-[39px] pb-[56px]">
                   <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
-                    Joe is officially a Lapland folk, and delighted to announce
-                    that he will be spending the Christmas season at LapLandUK.
-                    Him and his new friend Conker hope to get up to lots of
-                    mischief together!
+                    Joe is excited to say that he is currently living and
+                    working in Paris as one of Disney’s character and parade
+                    performers.
                   </p>
                 </div>
               </div>
 
               <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-16 sm:items-start items-center">
-                <div>
-                  <Image
-                    src="/lluk-11.jpg"
-                    alt="LaplandUK1"
-                    width={450}
-                    height={533}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/lluk-2.jpeg"
-                    alt="LaplandUK2"
-                    width={500}
-                    height={281}
-                  />
-                </div>
+                <Image
+                  src="/disney-paris.webp"
+                  alt="LaplandUK1"
+                  width={450}
+                  height={533}
+                />
               </div>
             </div>
           </div>
@@ -72,7 +84,47 @@ const news = () => {
         </div>
       </div>
 
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[65px] pb-[87px] px-10">
+      {/* Previous projects section */}
+      <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
+        <div className="max-w-[1029px] w-full z-0">
+          <div className="flex flex-col">
+            <div className="flex flex-col">
+              <div className="flex-1 flex-col flex justify-center items-start">
+                <div className="flex justify-center">
+                  <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
+                    Recent/Previous? Projects
+                  </h2>
+                </div>
+
+                <div className="flex justify-center pt-[39px] pb-[56px]">
+                  <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
+                    Take a look back at all the things Joe has done.
+                  </p>
+                </div>
+
+                <div className="flex-1 w-full flex flex-col justify-center ">
+                  {history.map(({ id, title, desc }, index) => (
+                    <div key={id} className="space-y-10">
+                      <div className={`${index === 0 ? 'pt-0' : 'pt-10'}`}>
+                        <p className="font-bold ss:text-[20px] text-[16px] leading-[24px] text-white">
+                          {title}
+                        </p>
+                        <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white pt-5">
+                          {desc}
+                        </p>
+                      </div>
+                      <hr className="" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Current project section */}
+      <div className="bg-primary relative flex flex-col justify-center items-center pt-[65px] pb-[87px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <div className="flex justify-center items-center sm:flex-row relative flex-col-reverse md:gap-x-0 gap-x-10">
             <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
@@ -97,13 +149,13 @@ const news = () => {
         </div>
       </div>
 
-      <div className="bg-primary relative flex flex-col justify-center items-center pt-[66px] pb-[80px] px-10">
+      <div className="bg-darker relative flex flex-col justify-center items-center pt-[66px] pb-[80px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <Video />
         </div>
       </div>
 
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[153px] pb-[200px] px-10">
+      <div className="bg-primary relative flex flex-col justify-center items-center pt-[153px] pb-[200px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <Gallery />
         </div>
