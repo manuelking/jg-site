@@ -85,7 +85,7 @@ const news = () => {
       </div>
 
       {/* Previous projects section */}
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
+      {/* <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <div className="flex flex-col">
             <div className="flex flex-col">
@@ -121,10 +121,10 @@ const news = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Current project section */}
-      <div className="bg-primary relative flex flex-col justify-center items-center pt-[65px] pb-[87px] px-10">
+      <div className="bg-darker relative flex flex-col justify-center items-center pt-[65px] pb-[87px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <div className="flex justify-center items-center sm:flex-row relative flex-col-reverse md:gap-x-0 gap-x-10">
             <div className="flex-1 flex justify-center items-center md:mr-10 mr-0 md:mt-0 mt-10 relative">
@@ -149,13 +149,13 @@ const news = () => {
         </div>
       </div>
 
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[66px] pb-[80px] px-10">
+      <div className="bg-primary relative flex flex-col justify-center items-center pt-[66px] pb-[80px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <Video />
         </div>
       </div>
 
-      <div className="bg-primary relative flex flex-col justify-center items-center pt-[153px] pb-[200px] px-10">
+      <div className="bg-darker relative flex flex-col justify-center items-center pt-[153px] pb-[200px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           <Gallery />
         </div>
