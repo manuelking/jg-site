@@ -108,7 +108,7 @@ const cvRecentWork = () => {
               <div className="flex-1 flex flex-wrap sm:flex-row flex-col gap-y-10 gap-x-16 sm:items-start items-center">
                 {images.map(({ src, alt, w, h }, index) => (
                   <Image
-                    id={`${src} + ${index}`}
+                    key={src + index}
                     src={src}
                     alt={alt}
                     width={w}
