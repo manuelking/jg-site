@@ -3,12 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
-  const [toggleCV, setToggleCV] = useState(false)
   const router = useRouter()
 
   return (
@@ -42,7 +39,7 @@ const Navbar = () => {
                       className={`group-hover:block hidden p-6 bg-tertiary absolute min-w-[160px] rounded-b-xl sidebar z-20 -right-[68px]`}
                     >
                       <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-2">
-                        {cvLinks.map((nav, index) => (
+                        {cvLinks.map((nav) => (
                           <li
                             key={nav.id}
                             className={`font-normal cursor-pointer text-[16px] text-nav `}
@@ -96,31 +93,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`font-normal cursor-pointer text-[20px] text-nav mb-4`}
               >
-                {nav.title === 'CV' ? (
-                  <div className="flex flex-col">
-                    <div
-                      onClick={() => setToggleCV((prev) => !prev)}
-                      className="flex-row flex items-center justify-center gap-x-2"
-                    >
-                      <p>CV</p>
-                      <FontAwesomeIcon icon={faChevronDown} />
-                    </div>
-                    <div className={`${toggleCV ? 'block' : 'hidden'} flex`}>
-                      <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-2 py-4">
-                        {cvLinks.map((nav, index) => (
-                          <li
-                            key={nav.id}
-                            className={`font-normal cursor-pointer text-[12px] text-nav `}
-                          >
-                            <Link href={nav.link}>{nav.title}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ) : (
-                  <Link href={nav.link}>{nav.title}</Link>
-                )}
+                <Link href={nav.link}>{nav.title}</Link>
               </li>
             ))}
           </ul>

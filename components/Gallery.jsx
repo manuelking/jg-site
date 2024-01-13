@@ -112,7 +112,7 @@ const Gallery = () => {
               <ImageViewer
                 src={images.map((i) => i.src)}
                 currentIndex={currentImage}
-                disableScroll={false}
+                disableScroll
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
                 backgroundStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
@@ -126,59 +126,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-
-// <div className="flex justify-center">
-//               <Image
-//                 src="/galimg1.svg"
-//                 alt="Gallery Image 1"
-//                 width={261}
-//                 height={288}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>
-//             <div className="flex justify-center">
-//               <Image
-//                 src="/galimg2.svg"
-//                 alt="Gallery Image 2"
-//                 width={261}
-//                 height={266}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>
-//             <div className="flex justify-center">
-//               <Image
-//                 src="/galimg3.svg"
-//                 alt="Gallery Image 3"
-//                 width={244}
-//                 height={288}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>
-
-//             <div className="flex justify-center">
-//               <Image
-//                 src="/galimg4us.png"
-//                 alt="Gallery Image 4"
-//                 width={393}
-//                 height={212}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>
-//             <div className="flex justify-center">
-//               <Image
-//                 src="/galimg5.jpeg"
-//                 alt="Gallery Image 5"
-//                 width={393}
-//                 height={212}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>
-//             <div className="flex justify-center">
-//               <Image
-//                 src="/galimg6.jpeg"
-//                 alt="Gallery Image 6"
-//                 width={393}
-//                 height={212}
-//                 className="hover:scale-125 transition duration-500 cursor-pointer "
-//               />
-//             </div>

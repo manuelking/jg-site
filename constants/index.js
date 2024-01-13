@@ -11,8 +11,8 @@ export const navLinks = [
   },
   {
     id: 'cv',
-    title: 'CV',
-    link: '/cv',
+    title: 'CVs & Recent Work',
+    link: '/cv-recent-work',
   },
   {
     id: 'teaching',
@@ -39,8 +39,8 @@ export const menuLinks = [
   },
   {
     id: 'cv',
-    title: 'CV',
-    link: '/cv',
+    title: 'CVs & Recent Work',
+    link: '/cv-recent-work',
   },
   {
     id: 'teaching',

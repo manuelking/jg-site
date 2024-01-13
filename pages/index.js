@@ -40,7 +40,7 @@ export default function Home() {
           <div className="flex ss:flex-row ss:gap-y-0 gap-y-8 flex-col justify-between">
             <div className="flex flex-col ss:items-start items-center">
               <p className="font-normal md:text-[24px] text-[18px]">
-                Want to know More?
+                Want to know more?
               </p>
               <h1 className="md:text-[44px] text-[34px]">Download my CV</h1>
             </div>
