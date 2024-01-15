@@ -61,9 +61,16 @@ const images = [
   },
   {
     id: 'img9',
-    src: '/jg-galimg9.jpeg',
+    src: '/jg-lluk3.jpeg',
     alt: 'Gallery Image 9',
     w: 393,
+    h: 212,
+  },
+  {
+    id: 'img10',
+    src: '/jg-lluk4.jpeg',
+    alt: 'Gallery Image 10',
+    w: 250,
     h: 212,
   },
 ]

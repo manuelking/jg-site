@@ -12,7 +12,13 @@ const recentWork = [
       {
         src: '/lluk-11.jpg',
         alt: 'LaplandUK',
-        w: 450,
+        w: 400,
+        h: 533,
+      },
+      {
+        src: '/jg-galimg9.jpeg',
+        alt: 'LaplandUK',
+        w: 220,
         h: 533,
       },
     ],
