@@ -42,7 +42,8 @@ const news = () => {
                   <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
                     Joe is excited to say that he is currently living and
                     working in Paris as one of Disney’s character and parade
-                    performers.
+                    performers. He is friends with a variety of characters, from
+                    Spider-Man to Woody and Captain Jack Sparrow to Eeyore.
                   </p>
                 </div>
               </div>
