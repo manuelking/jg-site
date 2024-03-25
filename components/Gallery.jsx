@@ -1,6 +1,8 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import ImageViewer from 'react-simple-image-viewer'
+import { getGallery } from '@/sanity/client'
+import { Oval } from 'react-loader-spinner'
 
 const images = [
   {
@@ -108,6 +110,23 @@ const images = [
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [isViewerOpen, setIsViewerOpen] = useState(false)
+  const [gallery, setGallery] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+
+  console.log('galley', gallery)
+
+  useEffect(() => {
+    const fetchGallery = async () => {
+      setIsLoading(true)
+      const gallery = await getGallery()
+      if (gallery) {
+        setGallery(gallery)
+        setIsLoading(false)
+      }
+    }
+
+    fetchGallery()
+  }, [])
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index)
@@ -130,6 +149,50 @@ const Gallery = () => {
         </div>
 
         <div className="flex pt-[36px] items-center justify-center">
+          {isLoading && !gallery ? (
+            <Oval
+              visible={isLoading}
+              height="80"
+              width="80"
+              color="#C7D6FF"
+              ariaLabel="oval-loading"
+            />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-y-[54px] gap-x-10">
+              {gallery?.map((image, index) => (
+                <Image
+                  key={image.id}
+                  src={image.src}
+                  alt={image.name}
+                  width={393}
+                  height={212}
+                  className="hover:scale-110 transition duration-500 cursor-pointer"
+                  onClick={() => openImageViewer(index)}
+                />
+              ))}
+
+              {isViewerOpen && (
+                <ImageViewer
+                  src={gallery.map((i) => i.src)}
+                  currentIndex={currentImage}
+                  disableScroll
+                  closeOnClickOutside={true}
+                  onClose={closeImageViewer}
+                  backgroundStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
+                />
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Gallery
+
+{
+  /*<div className="flex pt-[36px] items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-y-[54px] gap-x-10">
             {images.map(({ id, src, alt, w, h }, index) => (
               <Image
@@ -154,10 +217,5 @@ const Gallery = () => {
               />
             )}
           </div>
-        </div>
-      </div>
-    </section>
-  )
+            </div> */
 }
-
-export default Gallery
