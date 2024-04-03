@@ -6,7 +6,7 @@ import React from 'react'
 
 const recentWork = [
   {
-    title: 'LapLandUK',
+    title: 'LapLandUK 2023',
     desc: 'Joe is officially a Lapland folk, and delighted to announce that he will be spending the Christmas season at LapLandUK. Him and his new friend Conker hope to get up to lots of mischief together!',
     images: [
       {
