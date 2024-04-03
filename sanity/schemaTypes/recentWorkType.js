@@ -12,8 +12,7 @@ const recentWorkType = {
     {
       name: 'body',
       title: 'Body',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'string',
       validation: (rule) => rule.required(),
     },
     {

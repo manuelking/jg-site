@@ -113,8 +113,6 @@ const Gallery = () => {
   const [gallery, setGallery] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  console.log('galley', gallery)
-
   useEffect(() => {
     const fetchGallery = async () => {
       setIsLoading(true)

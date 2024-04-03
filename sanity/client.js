@@ -27,7 +27,7 @@ const fetchCurrentWork = async () => {
           _id,
           title,
           body,
-          "images": images[]{
+          "images": {
             ...,
             "url": asset->url
           }
@@ -42,10 +42,10 @@ const fetchCurrentWork = async () => {
   }
 }
 
-const fetchPrevious = async () => {
+export const fetchRecentWork = async () => {
   try {
-    const PREVIOUS_WORK_QUERY = `
-    *[_type == "previousWork"] {
+    const RECENT_WORK_QUERY = `
+    *[_type == "recentWork"] {
         _id,
         title,
         body,
@@ -55,9 +55,9 @@ const fetchPrevious = async () => {
         }
     } | order(date desc)
   `
-    const gallery = await client.fetch(GALLERY_QUERY)
+    const recentWork = await client.fetch(RECENT_WORK_QUERY)
 
-    return gallery
+    return recentWork
   } catch (error) {
     console.error('Error fetching data:', error)
     throw error
