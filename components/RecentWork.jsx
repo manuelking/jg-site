@@ -6,8 +6,6 @@ export default function RecentWork() {
   const [recentWork, setRecentWork] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  console.log(recentWork)
-
   useEffect(() => {
     const getRecentWork = async () => {
       setIsLoading(true)
@@ -20,6 +18,7 @@ export default function RecentWork() {
 
     getRecentWork()
   }, [])
+
   return (
     <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
       <div className="max-w-[1029px] w-full z-0">
@@ -45,7 +44,7 @@ export default function RecentWork() {
                   key={image._key}
                   src={image.url}
                   alt={image._ref}
-                  width={220}
+                  width={450}
                   height={533}
                 />
               ))}

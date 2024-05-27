@@ -1,10 +1,10 @@
 import { Footer, Gallery, Navbar, Projects, Video } from '@/components'
+import CurrentWork from '@/components/CurrentWork'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import React from 'react'
 
 // can change image to an array of images if i want to display multiple at a time
-
 //max-w-[900px] w-[900px]
 
 const news = () => {
@@ -27,39 +27,7 @@ const news = () => {
       </div>
 
       {/* Disneyland Paris news section */}
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
-        <div className="max-w-[1029px] w-full z-0">
-          <div className="flex flex-col">
-            <div className="flex flex-col">
-              <div className="flex-1 flex-col flex justify-center items-start">
-                <div className="flex justify-center">
-                  <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
-                    Disneyland Paris
-                  </h2>
-                </div>
-
-                <div className="flex justify-center pt-[39px] pb-[56px]">
-                  <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
-                    Joe is excited to say that he is currently living and
-                    working in Paris as one of Disney’s character and parade
-                    performers. He is friends with a variety of characters, from
-                    Spider-Man to Woody and Captain Jack Sparrow to Eeyore.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex-1 flex sm:flex-row flex-col gap-y-10 gap-x-16 sm:items-start items-center">
-                <Image
-                  src="/disney-paris.webp"
-                  alt="DisneyLand"
-                  width={450}
-                  height={533}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CurrentWork />
 
       <div className="bg-primary relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
         <div className="max-w-[1029px] w-full z-0">

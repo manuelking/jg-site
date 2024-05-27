@@ -20,22 +20,23 @@ export const getGallery = async () => {
   }
 }
 
-const fetchCurrentWork = async () => {
+export const fetchCurrent = async (content) => {
+  const type = content === 'work' ? 'current-work' : 'current-project'
   try {
     const CURRENT_WORK_QUERY = `
-      *[_type == "currentWork"] {
-          _id,
-          title,
-          body,
-          "images": {
-            ...,
-            "url": asset->url
-          }
-      } | order(date desc)
+    *[_type == "current-project"] {
+      _id,
+      title,
+      body,
+      "images": images[]{
+        ...,
+        "url": asset->url
+      }
+    } | order(_createdAt desc)
     `
-    const gallery = await client.fetch(CURRENT_WORK_QUERY)
+    const current = await client.fetch(CURRENT_WORK_QUERY)
 
-    return gallery
+    return current[0]
   } catch (error) {
     console.error('Error fetching data:', error)
     throw error
@@ -45,7 +46,7 @@ const fetchCurrentWork = async () => {
 export const fetchRecentWork = async () => {
   try {
     const RECENT_WORK_QUERY = `
-    *[_type == "recentWork"] {
+    *[_type == "recent-work"] {
         _id,
         title,
         body,

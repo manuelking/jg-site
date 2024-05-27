@@ -1,5 +1,5 @@
 const recentWorkType = {
-  name: 'recentWork',
+  name: 'recent-work',
   title: 'Recent Work',
   type: 'document',
   fields: [
