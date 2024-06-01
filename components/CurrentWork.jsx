@@ -19,6 +19,12 @@ export default function CurrentWork() {
     getCurrentWork()
   }, [])
 
+  if (!currentWork) {
+    return
+  }
+
+  const { title, body, images } = currentWork && currentWork
+
   return (
     !isLoading &&
     currentWork && (
@@ -29,23 +35,23 @@ export default function CurrentWork() {
               <div className="flex-1 flex-col flex justify-center items-start">
                 <div className="flex justify-center">
                   <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
-                    {currentWork?.title}
+                    {title}
                   </h2>
                 </div>
 
                 <div className="flex justify-center pt-[39px] pb-[56px]">
                   <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
-                    {currentWork?.body[0].children[0].text}
+                    {body[0].children[0].text}
                   </p>
                 </div>
               </div>
 
               <div className="flex-1 flex flex-wrap sm:flex-row flex-col gap-y-10 gap-x-16 sm:items-start items-center">
-                {currentWork?.images.map((i) => (
+                {images.map((i) => (
                   <Image
                     key={i._key}
                     src={i.url}
-                    alt={currentWork?.title}
+                    alt={title}
                     width={450}
                     height={533}
                   />

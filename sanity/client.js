@@ -23,8 +23,8 @@ export const getGallery = async () => {
 export const fetchCurrent = async (content) => {
   const type = content === 'work' ? 'current-work' : 'current-project'
   try {
-    const CURRENT_WORK_QUERY = `
-    *[_type == "current-project"] {
+    const CURRENT_QUERY = `
+    *[_type == "${type}"] {
       _id,
       title,
       body,
@@ -34,7 +34,7 @@ export const fetchCurrent = async (content) => {
       }
     } | order(_createdAt desc)
     `
-    const current = await client.fetch(CURRENT_WORK_QUERY)
+    const current = await client.fetch(CURRENT_QUERY)
 
     return current[0]
   } catch (error) {
