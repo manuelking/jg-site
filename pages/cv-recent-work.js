@@ -1,4 +1,5 @@
 import { Footer, Navbar } from '@/components'
+import RecentWork from '@/components/RecentWork'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -55,7 +56,7 @@ const cvRecentWork = () => {
               target="_blank"
               rel="noopener noreferrer"
               download="joegater-teachingcv"
-  ></a>*/}
+            ></a>*/}
             <a target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
@@ -93,7 +94,9 @@ const cvRecentWork = () => {
         </div>
       </div>
 
-      <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
+      <RecentWork />
+
+      {/*<div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
         <div className="max-w-[1029px] w-full z-0">
           {recentWork.map(({ title, desc, images }, index) => (
             <div key={title + index} className="flex flex-col">
@@ -125,46 +128,7 @@ const cvRecentWork = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* old previous projects section design */}
-      {/*<div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
-        <div className="max-w-[1029px] w-full z-0">
-          <div className="flex flex-col">
-            <div className="flex flex-col">
-              <div className="flex-1 flex-col flex justify-center items-start">
-                <div className="flex justify-center">
-                  <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
-                    Recent Work
-                  </h2>
-                </div>
-
-                <div className="flex justify-center pt-[39px] pb-[56px]">
-                  <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
-                    Take a look back at all the things Joe has done.
-                  </p>
-                </div>
-
-                <div className="flex-1 w-full flex flex-col justify-center ">
-                  {history.map(({ id, title, desc }, index) => (
-                    <div key={id} className="space-y-10">
-                      <div className={`${index === 0 ? 'pt-0' : 'pt-10'}`}>
-                        <p className="font-bold ss:text-[20px] text-[16px] leading-[24px] text-white">
-                          {title}
-                        </p>
-                        <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white pt-5">
-                          {desc}
-                        </p>
-                      </div>
-                      <hr className="" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-                  </div>*/}
+      </div>*/}
 
       <div>
         <Footer />
