@@ -52,8 +52,10 @@ const news = () => {
 
               <div className="flex max-w-[538px] h-[155]">
                 <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white">
-                  Joe is currently developing multiple screenplays with a
-                  handful of exciting people.
+                  Joe is currently developing multiple plays and screenplays
+                  with a handful of exciting people. His latest play “Hit me
+                  with the Truth” was recently performed at The Lion & Unicorn
+                  Theatre starring Joe and Brian Elias Jackson
                 </p>
               </div>
             </div>
