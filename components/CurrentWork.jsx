@@ -31,9 +31,9 @@ export default function CurrentWork() {
     currentWork.length > 0 && (
       <div className="bg-darker relative flex flex-col justify-center items-center pt-[48px] pb-[97px] px-10">
         <div className="max-w-[1029px] w-full z-0 gap-24 flex flex-col">
-          {currentWork.map(({ title, body, images }) => {
+          {currentWork.map(({ title, body, images, _id }) => {
             return (
-              <div className="flex flex-col">
+              <div className="flex flex-col" key={_id}>
                 <div className="flex-1 flex-col flex justify-center items-start">
                   <div className="flex justify-center">
                     <h2 className="font-bold ss:text-[36px] text-[32px] leading-[44px] text-white">
