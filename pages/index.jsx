@@ -13,9 +13,6 @@ export default function Home() {
         title="Joe Gater Actor & Teacher"
         description="Explore exciting acting opportunities with Joe Gater. Connect via Spotlight, email, Instagram, Twitter, or YouTube for a teching session."
       />
-      <div className="px-10">
-        <Navbar />
-      </div>
 
       <div className="bg-primary relative flex justify-center items-center pt-[80px] px-10 pb-[77px]">
         <div className="max-w-[1029px] w-full z-10">

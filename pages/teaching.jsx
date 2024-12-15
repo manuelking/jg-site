@@ -7,9 +7,6 @@ const teaching = () => {
   return (
     <div className="bg-primary relative w-full overflow-hidden">
       <NextSeo title="Teaching - Joe Gater" description="" />
-      <div className="z-10 px-10">
-        <Navbar />
-      </div>
 
       <div className="bg-primary relative flex justify-center pt-[80px] pb-[66px] px-10">
         <div className="max-w-[1029px] w-full z-0">

@@ -19,6 +19,11 @@ export const navLinks = [
     title: 'Teaching',
     link: '/teaching',
   },
+  {
+    id: 'gallery',
+    title: 'Gallery',
+    link: '/gallery',
+  },
 ]
 
 export const menuLinks = [
@@ -46,6 +51,11 @@ export const menuLinks = [
     id: 'teaching',
     title: 'Teaching',
     link: '/teaching',
+  },
+  {
+    id: 'gallery',
+    title: 'Gallery',
+    link: '/gallery',
   },
 ]
 

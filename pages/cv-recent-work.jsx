@@ -35,9 +35,6 @@ const cvRecentWork = () => {
         title="News - Joe Gater"
         description="Stay updated on Joe's exciting ventures in filmmaking! Explore his screenplays and collaborations with director Tom Neo on thrilling projects in front and behind the camera. Get the latest news now!"
       />
-      <div className="z-10 px-10">
-        <Navbar />
-      </div>
 
       <div className="bg-primary relative flex flex-col justify-center items-center pt-[84px] pb-[35px] px-10">
         <div className="max-w-[1029px] w-full z-0 flex flex-col gap-6">
