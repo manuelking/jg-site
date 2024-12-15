@@ -7,21 +7,18 @@ const heroSectionType = {
       name: 'title',
       title: 'title',
       type: 'string',
-      validation: (rule) => rule.required(),
     },
     {
       name: 'body',
       title: 'Body',
       type: 'array',
       of: [{ type: 'block' }],
-      validation: (rule) => rule.required(),
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       options: { hotspot: true },
-      validation: (rule) => rule.required(),
     },
   ],
 }
