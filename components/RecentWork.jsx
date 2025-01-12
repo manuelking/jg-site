@@ -1,4 +1,5 @@
 import { fetchRecentWork } from '@/sanity/client'
+import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
@@ -37,10 +38,29 @@ export default function RecentWork() {
                     </h2>
                   </div>
 
-                  <div className="flex justify-center pt-[39px] pb-[56px]">
-                    <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
-                      {body}
-                    </p>
+                  <div className="flex justify-center pt-[39px] pb-[56px] font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
+                    <PortableText
+                      value={body}
+                      components={{
+                        marks: {
+                          link: ({ children, value }) => {
+                            const rel = !value?.href?.startsWith('/')
+                              ? 'noreferrer noopener'
+                              : undefined
+                            return (
+                              <a
+                                href={value.href}
+                                target="_blank"
+                                rel={rel}
+                                className="text-tertiary underline hover:text-blue-500 cursor-pointer"
+                              >
+                                {children}
+                              </a>
+                            )
+                          },
+                        },
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -67,3 +87,9 @@ export default function RecentWork() {
     </div>
   )
 }
+
+// <div className="flex justify-center pt-[39px] pb-[56px]">
+//   <p className="font-light ss:text-[20px] text-[16px] leading-[24px] text-white max-w-[900px]">
+//     {body}
+//   </p>
+// </div>

@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list'
+
 const recentWorkType = {
   name: 'recent-work',
   title: 'Recent Work',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'recent-work' }),
     {
       name: 'title',
       title: 'title',
@@ -12,7 +19,8 @@ const recentWorkType = {
     {
       name: 'body',
       title: 'Body',
-      type: 'string',
+      type: 'array',
+      of: [{ type: 'block' }],
       validation: (rule) => rule.required(),
     },
     {

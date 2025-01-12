@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list'
+
 const galleySchema = {
   name: 'gallery',
   title: 'Gallery',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'gallery' }),
     {
       name: 'image',
       title: 'Image',

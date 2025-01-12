@@ -9,11 +9,12 @@ import { structureTool } from 'sanity/structure'
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from './sanity/env'
 import { schema } from './sanity/schema'
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 const singletonTypes = new Set(['hero-section'])
 
-export const structure = (S) =>
+export const structure = (S, context) =>
   S.list()
     .title('Content')
     .items([
@@ -80,14 +81,42 @@ export const structure = (S) =>
           S.list()
             .title('Recent')
             .items([
+              orderableDocumentListDeskItem({
+                type: 'recent-work',
+                S,
+                context,
+                title: 'Recent',
+              }),
+            ])
+        ),
+      orderableDocumentListDeskItem({
+        type: 'gallery',
+        S,
+        context,
+        title: 'Gallery',
+      }),
+      S.listItem()
+        .title('Backup - Recent')
+        .child(
+          S.list()
+            .title('Backup - Recent')
+            .items([
               ...S.documentTypeListItems().filter((listItem) =>
                 ['recent-work'].includes(listItem.getId())
               ),
             ])
         ),
-      ...S.documentTypeListItems().filter((listItem) =>
-        ['gallery'].includes(listItem.getId())
-      ),
+      S.listItem()
+        .title('Backup - Gallery')
+        .child(
+          S.documentList()
+            .title('Backup - Gallery')
+            .filter('_type == "gallery"')
+        ),
+
+      // ...S.documentTypeListItems().filter((listItem) =>
+      //   ['gallery'].includes(listItem.getId())
+      // ),
     ])
 
 // S.listItem()

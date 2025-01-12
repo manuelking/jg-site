@@ -10,7 +10,7 @@ export const client = createClient({
 
 export const getGallery = async () => {
   try {
-    const GALLERY_QUERY = `*[_type == "gallery"]{_id, image, "src": image.asset->url, name}|order(_createdAt asc)`
+    const GALLERY_QUERY = `*[_type == "gallery"]|order(orderRank) {_id, image, "src": image.asset->url, name}|order(_createdAt asc)`
     const gallery = await client.fetch(GALLERY_QUERY)
 
     return gallery
@@ -46,7 +46,7 @@ export const fetchCurrent = async (content) => {
 export const fetchRecentWork = async () => {
   try {
     const RECENT_WORK_QUERY = `
-    *[_type == "recent-work"] {
+    *[_type == "recent-work"]|order(orderRank) {
         _id,
         title,
         body,
