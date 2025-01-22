@@ -24,7 +24,7 @@ export const fetchCurrent = async (content) => {
   const type = content === 'work' ? 'current-work' : 'current-project'
   try {
     const CURRENT_QUERY = `
-    *[_type == "${type}"] {
+    *[_type == "${type}"]|order(orderRank) {
       _id,
       title,
       body,

@@ -59,13 +59,19 @@ export const structure = (S, context) =>
           S.list()
             .title('News')
             .items([
-              S.listItem()
-                .title('Current Work')
-                .child(
-                  S.documentList()
-                    .title('Current Work')
-                    .filter('_type == "current-work"')
-                ),
+              orderableDocumentListDeskItem({
+                type: 'current-work',
+                S,
+                context,
+                title: 'Current Work',
+              }),
+              // S.listItem()
+              //   .title('Current Work Backup')
+              //   .child(
+              //     S.documentList()
+              //       .title('Current Work Backup')
+              //       .filter('_type == "current-work"')
+              //   ),
               S.listItem()
                 .title('Current Project')
                 .child(
@@ -95,24 +101,24 @@ export const structure = (S, context) =>
         context,
         title: 'Gallery',
       }),
-      S.listItem()
-        .title('Backup - Recent')
-        .child(
-          S.list()
-            .title('Backup - Recent')
-            .items([
-              ...S.documentTypeListItems().filter((listItem) =>
-                ['recent-work'].includes(listItem.getId())
-              ),
-            ])
-        ),
-      S.listItem()
-        .title('Backup - Gallery')
-        .child(
-          S.documentList()
-            .title('Backup - Gallery')
-            .filter('_type == "gallery"')
-        ),
+      // S.listItem()
+      //   .title('Backup - Recent')
+      //   .child(
+      //     S.list()
+      //       .title('Backup - Recent')
+      //       .items([
+      //         ...S.documentTypeListItems().filter((listItem) =>
+      //           ['recent-work'].includes(listItem.getId())
+      //         ),
+      //       ])
+      //   ),
+      // S.listItem()
+      //   .title('Backup - Gallery')
+      //   .child(
+      //     S.documentList()
+      //       .title('Backup - Gallery')
+      //       .filter('_type == "gallery"')
+      //   ),
 
       // ...S.documentTypeListItems().filter((listItem) =>
       //   ['gallery'].includes(listItem.getId())

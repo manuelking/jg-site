@@ -1,8 +1,15 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list'
+
 const currentWorkType = {
   name: 'current-work',
   title: 'Current Work',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'current-work' }),
     {
       name: 'title',
       title: 'title',
