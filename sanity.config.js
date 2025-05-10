@@ -18,13 +18,6 @@ export const structure = (S, context) =>
   S.list()
     .title('Content')
     .items([
-      //*
-      // S.listItem().title('Gallery').child(
-      //   /* Create a list of all posts */
-      //   S.documentList().title('Gallery').filter('_type == "gallery"')
-      // ),
-      //*
-
       S.listItem()
         .title('Home')
         .child(
@@ -65,13 +58,6 @@ export const structure = (S, context) =>
                 context,
                 title: 'Current Work',
               }),
-              // S.listItem()
-              //   .title('Current Work Backup')
-              //   .child(
-              //     S.documentList()
-              //       .title('Current Work Backup')
-              //       .filter('_type == "current-work"')
-              //   ),
               S.listItem()
                 .title('Current Project')
                 .child(
@@ -79,6 +65,26 @@ export const structure = (S, context) =>
                     .title('Current Project')
                     .filter('_type == "current-project"')
                 ),
+            ])
+        ),
+      S.listItem()
+        .title('Contact')
+        .child(
+          S.list()
+            .title('Contact')
+            .items([
+              S.listItem()
+                .title('Contact')
+                .id('contact')
+                .child(
+                  S.document().schemaType('contact').documentId('contact')
+                ),
+              orderableDocumentListDeskItem({
+                type: 'contact-items',
+                S,
+                context,
+                title: 'Contact Items',
+              }),
             ])
         ),
       S.listItem()
@@ -101,6 +107,25 @@ export const structure = (S, context) =>
         context,
         title: 'Gallery',
       }),
+      S.listItem()
+        .title(`CV's`)
+        .child(
+          S.list()
+            .title(`CV's`)
+            .items([
+              S.listItem()
+                .title('Acting CV')
+                .id('acting-cv')
+                .child(S.document().schemaType('cv').documentId('acting-cv')),
+              S.listItem()
+                .title('Teaching CV')
+                .id('teaching-cv')
+                .child(S.document().schemaType('cv').documentId('teaching-cv')),
+            ])
+        ),
+      // S.listItem()
+      //   .title('CV Test')
+      //   .child(S.documentList().title('CV Test').filter('_type == "cv"')),
       // S.listItem()
       //   .title('Backup - Recent')
       //   .child(

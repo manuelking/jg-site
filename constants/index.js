@@ -157,6 +157,34 @@ export const contacts = [
   },
 ]
 
+export const contactsLogoMap = {
+  spotlight: {
+    src: './icon-sp.svg',
+    width: '54',
+    height: '47',
+  },
+  instagram: {
+    src: './icon-ig.svg',
+    width: '47',
+    height: '49',
+  },
+  email: {
+    src: './icon-em.svg',
+    width: '42',
+    height: '56',
+  },
+  twitter: {
+    src: './icon-tw.svg',
+    width: '55',
+    height: '57',
+  },
+  youtube: {
+    src: './icon-yt.svg',
+    width: '50',
+    height: '36',
+  },
+}
+
 export const gallery = [
   {
     id: 'galimg-1',
@@ -187,14 +215,3 @@ export const gallery = [
     h: '212',
   },
 ]
-
-// {
-//   id: 'cv-link1',
-//   title: 'Acting CV',
-//   link: 'https://docs.google.com/document/d/1x35jVThSZrSO7jGxYJr-wJ7WTCMqkfwrTpP14UYMLY8/edit',
-// },
-// {
-//   id: 'cv-link2',
-//   title: 'Teaching CV',
-//   link: 'https://docs.google.com/document/d/1U8Jxn2eg6iNKS2blHK8YA_nnnbCM54X4Tj2JC4a_8Ik/edit',
-// },

@@ -125,3 +125,64 @@ export const fetchAbout = async () => {
     throw error
   }
 }
+
+export const fetchCV = async (type) => {
+  const cv = type === 'acting' ? 'acting-cv' : 'teaching-cv'
+  try {
+    const CV_QUERY = `
+      *[_type == "cv" && _id == "${cv}"] {
+        _id,
+        "fileUrl": cvFile.asset->url
+      } | order(_createdAt desc)
+    `
+    const data = await client.fetch(CV_QUERY)
+
+    return data[0]
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    throw error
+  }
+}
+
+export const fetchContactItems = async () => {
+  try {
+    const CONTACT_ITEMS_QUERY = `*[_type == "contact-items"] | order(orderRank) {_id, title, link, type} | order(_createdAt asc)`
+    const data = await client.fetch(CONTACT_ITEMS_QUERY)
+
+    return data
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    throw error
+  }
+}
+
+export const fetchContact = async () => {
+  try {
+    const CONTACT_QUERY = `
+    *[_type == "contact"] {
+        _id,
+        title,
+        body,
+         image {
+          asset->{
+            url,
+            metadata {
+              dimensions {
+                width,
+                height
+              }
+            }
+          }
+        }, 
+        "src": image.asset->url,
+        heading,
+    } | order(date desc)
+  `
+    const data = await client.fetch(CONTACT_QUERY)
+
+    return data[0]
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    throw error
+  }
+}
