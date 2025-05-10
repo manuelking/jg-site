@@ -1,27 +1,8 @@
-import { ContactMe, FindMe, Footer } from '@/components'
-import { fetchContact } from '@/sanity/client'
+import { Footer } from '@/components'
+import ContactSections from '@/components/ContactSections'
 import { NextSeo } from 'next-seo'
-import React, { useEffect, useState } from 'react'
 
 const contact = () => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [content, setContent] = useState(null)
-
-  useEffect(() => {
-    const getContent = async () => {
-      setIsLoading(true)
-      const data = await fetchContact()
-      if (data) {
-        setContent(data)
-        setIsLoading(false)
-      }
-    }
-
-    getContent()
-  }, [])
-
-  const heading = content?.heading
-
   return (
     <div className="bg-primary relative w-full overflow-hidden ">
       <NextSeo
@@ -31,12 +12,7 @@ const contact = () => {
 
       <div className="bg-primary relative flex justify-center items-center px-10 w-full">
         <div className="max-w-[1229px] z-0 space-y-20">
-          {(!isLoading || content) && (
-            <>
-              <ContactMe data={content} />
-              <FindMe heading={heading} />
-            </>
-          )}
+          <ContactSections />
         </div>
       </div>
 

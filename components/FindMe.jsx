@@ -7,21 +7,23 @@ import React, { useEffect, useState } from 'react'
 const ContactCard = ({ title, link, type }) => {
   const icon = contactsLogoMap[type]
   return (
-    <Link href={link}>
-      <div className="flex justify-center bg-[#1C263F] rounded-full py-2 p-6 h-[81px] md:w-[503px]">
-        <div className="flex justify-between items-center flex-row w-full">
-          <Image
-            src={icon.src}
-            alt={title}
-            width={icon.width}
-            height={icon.height}
-          />
-          <p className="text-white font-light xs:text-[20px] text-[16px] leading-[24px] xf:block hidden pl-2">
-            {title}
-          </p>
-          <Image src="./chev-arr.svg" alt="chevron" width={71} height={35} />
+    <Link href={link} passHref legacyBehavior>
+      <a target="_blank" rel="noopener noreferrer">
+        <div className="flex justify-center bg-[#1C263F] rounded-full py-2 p-6 h-[81px] md:w-[503px]">
+          <div className="flex justify-between items-center flex-row w-full">
+            <Image
+              src={icon.src}
+              alt={title}
+              width={icon.width}
+              height={icon.height}
+            />
+            <p className="text-white font-light xs:text-[20px] text-[16px] leading-[24px] xf:block hidden pl-2">
+              {title}
+            </p>
+            <Image src="./chev-arr.svg" alt="chevron" width={71} height={35} />
+          </div>
         </div>
-      </div>
+      </a>
     </Link>
   )
 }
