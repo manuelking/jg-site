@@ -162,26 +162,51 @@ export const contactsLogoMap = {
     src: './icon-sp.svg',
     width: '54',
     height: '47',
+    footer: {
+      src: './icon-spotlight-b.svg',
+      width: 42,
+      height: 42,
+    },
   },
   instagram: {
     src: './icon-ig.svg',
     width: '47',
     height: '49',
+    footer: {
+      src: './fticon-ig.svg',
+      width: 39,
+      height: 39,
+    },
   },
   email: {
     src: './icon-em.svg',
     width: '42',
     height: '56',
+    footer: {
+      src: './icon-at-b.svg',
+      width: 36,
+      height: 36,
+    },
   },
-  twitter: {
-    src: './icon-tw.svg',
-    width: '55',
-    height: '57',
+  x: {
+    src: './icon-x-w.svg',
+    width: '40',
+    height: '40',
+    footer: {
+      src: './icon-x-b.svg',
+      width: 36,
+      height: 36,
+    },
   },
   youtube: {
     src: './icon-yt.svg',
     width: '50',
     height: '36',
+    footer: {
+      src: './fticon-yt.svg',
+      width: 49,
+      height: 49,
+    },
   },
 }
 

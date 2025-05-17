@@ -1,7 +1,26 @@
+import { contactsLogoMap } from '@/constants'
+import { fetchFooterContactItems } from '@/sanity/client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const Footer = () => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [contacts, setContacts] = useState(null)
+
+  useEffect(() => {
+    const getContent = async () => {
+      setIsLoading(true)
+      const data = await fetchFooterContactItems()
+      if (data) {
+        setContacts(data)
+        setIsLoading(false)
+      }
+    }
+
+    getContent()
+  }, [])
+
   return (
     <section className="flex flex-col">
       <div className="flex ss:flex-row flex-col w-full justify-between items-center bg-tertiary md:px-[205px] px-[105px] gap-x-10">
@@ -30,38 +49,29 @@ const Footer = () => {
           <h2 className="font-normal ss:text-[20px] text-[20px] leading-[24px] text-[#001A5C]">
             Follow Me:
           </h2>
-          <ul className="flex justify-center items-center gap-x-[17px] ss:pt-0 pt-4">
-            <li>
-              <Link href="https://www.youtube.com/@joergater6883">
-                <Image
-                  src="/fticon-yt.svg"
-                  alt="yt footer"
-                  width={49}
-                  height={49}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://twitter.com/JoeGaterActor">
-                <Image
-                  src="/fticon-tw.svg"
-                  alt="tw footer"
-                  width={36}
-                  height={36}
-                />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.instagram.com/joegater_/?igshid=YmMyMTA2M2Y%3D">
-                <Image
-                  src="/fticon-ig.svg"
-                  alt="ig footer"
-                  width={39}
-                  height={39}
-                />
-              </Link>
-            </li>
-          </ul>
+          {!isLoading && contacts?.length > 0 && (
+            <ul className="flex justify-center items-center gap-x-[17px] ss:pt-0 pt-4">
+              {contacts.map(({ id, type, title, link }) => {
+                const icon = contactsLogoMap[type]
+                return (
+                  <li key={id}>
+                    <Link href={link} passHref legacyBehavior>
+                      <a target="_blank" rel="noopener noreferrer">
+                        {icon && (
+                          <Image
+                            src={icon.footer.src}
+                            alt={title}
+                            width={icon.footer.width}
+                            height={icon.footer.height}
+                          />
+                        )}
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          )}
         </div>
       </div>
 

@@ -156,6 +156,18 @@ export const fetchContactItems = async () => {
   }
 }
 
+export const fetchFooterContactItems = async () => {
+  try {
+    const CONTACT_ITEMS_QUERY = `*[_type == "contact-items" && show_in_footer == true] | order(orderRank) {_id, title, link, type} | order(_createdAt asc)`
+    const data = await client.fetch(CONTACT_ITEMS_QUERY)
+
+    return data
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    throw error
+  }
+}
+
 export const fetchContact = async () => {
   try {
     const CONTACT_QUERY = `
